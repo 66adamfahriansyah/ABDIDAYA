@@ -1,0 +1,793 @@
+<!DOCTYPE html>
+<html lang="id" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Pemberdayaan Petani Bawang Merah | Light Trap Surya IoT & LoRa Desa Sajen</title>
+  <meta name="description" content="Inovasi PPK Ormawa E-BIO PENS: Light Trap Tenaga Surya Berbasis IoT & LoRa untuk Petani Bawang Merah Desa Sajen, Mojokerto. Pameran Inovasi Abdidaya.">
+  
+  <!-- Google Fonts: Plus Jakarta Sans & JetBrains Mono -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+  
+  <!-- Tailwind CSS CDN & Konfigurasi Eksternal -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script src="js/tailwind-config.js"></script>
+
+  <!-- Custom CSS (Animasi, Pola Grid, & Scrollbar) -->
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body class="bg-[#fafcfb] text-slate-800 font-sans antialiased selection:bg-emerald-100 selection:text-emerald-900 overflow-x-hidden">
+
+  <!-- ========================================== -->
+  <!-- 1. NAVIGATION BAR (MINIMALIS & ELEGAN) -->
+  <!-- ========================================== -->
+  <header class="sticky top-0 z-50 backdrop-blur-md bg-white/90 border-b border-emerald-900/5 transition-all duration-300">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="flex items-center justify-between h-20">
+        
+        <!-- Logo & Brand Header -->
+        <a href="#beranda" class="flex items-center gap-3.5 group">
+          <div class="w-11 h-11 rounded-xl bg-gradient-to-br from-emerald-500 to-emerald-700 flex items-center justify-center text-white shadow-md shadow-emerald-600/20 group-hover:scale-105 transition-transform">
+            <svg class="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 3v1m0 16v1m9-9h-1M4 12H3m15.364 6.364l-.707-.707M6.343 6.343l-.707-.707m12.728 0l-.707.707M6.343 17.657l-.707.707M16 12a4 4 0 11-8 0 4 4 0 018 0z" />
+            </svg>
+          </div>
+          <div>
+            <div class="flex items-center gap-2">
+              <span class="font-extrabold text-base tracking-tight text-slate-900">PPK ORMAWA</span>
+              <span class="px-2 py-0.5 rounded-full text-[10px] font-semibold bg-emerald-50 text-emerald-700 border border-emerald-200/80">E-BIO PENS</span>
+            </div>
+            <p class="text-xs text-slate-500 font-medium tracking-tight">Desa Sajen, Pacet • Abdidaya Ormawa</p>
+          </div>
+        </a>
+
+        <!-- Desktop Navigation Links -->
+        <nav class="hidden lg:flex items-center gap-7">
+          <a href="#beranda" class="text-sm font-medium text-emerald-700 hover:text-emerald-800 transition-colors">Beranda</a>
+          <a href="#video-dokumentasi" class="text-sm font-medium text-slate-600 hover:text-emerald-600 transition-colors">Video Profil</a>
+          <a href="#spesifikasi-sistem" class="text-sm font-medium text-slate-600 hover:text-emerald-600 transition-colors">Spesifikasi IoT</a>
+          <a href="#liputan-pers" class="text-sm font-medium text-slate-600 hover:text-emerald-600 transition-colors">Liputan Media</a>
+          <a href="#dashboard-monitoring" class="text-sm font-medium text-slate-600 hover:text-emerald-600 transition-colors">Dashboard</a>
+          <a href="#legalitas-hki" class="text-sm font-medium text-slate-600 hover:text-emerald-600 transition-colors">Paten & HKI</a>
+          <a href="#tim-inovasi" class="text-sm font-medium text-slate-600 hover:text-emerald-600 transition-colors">Tim Inovasi</a>
+        </nav>
+
+        <!-- Right Action Button -->
+        <div class="hidden sm:flex items-center gap-3">
+          <button onclick="openDocumentModal()" class="inline-flex items-center gap-2 px-5 py-2.5 rounded-full text-xs font-semibold bg-emerald-600 hover:bg-emerald-700 text-white shadow-sm hover:shadow-md hover:shadow-emerald-600/25 transition-all duration-200">
+            <svg class="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 10v6m0 0l-3-3m3 3l3-3m2 8H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" />
+            </svg>
+            <span>Unduh Dokumen</span>
+          </button>
+        </div>
+
+        <!-- Mobile Menu Toggle Button -->
+        <button id="mobile-menu-btn" class="lg:hidden p-2 rounded-xl text-slate-600 hover:text-slate-900 hover:bg-slate-100 transition-colors" aria-label="Buka Menu Navigasi">
+          <svg class="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
+          </svg>
+        </button>
+
+      </div>
+    </div>
+
+    <!-- Mobile Dropdown Menu -->
+    <div id="mobile-menu" class="hidden lg:hidden border-t border-slate-100 bg-white/95 backdrop-blur-md px-4 pt-3 pb-6 space-y-2">
+      <a href="#beranda" class="block px-3 py-2 rounded-lg text-sm font-semibold text-emerald-700 bg-emerald-50">Beranda</a>
+      <a href="#video-dokumentasi" class="block px-3 py-2 rounded-lg text-sm font-medium text-slate-700 hover:bg-slate-50">Video Profil</a>
+      <a href="#spesifikasi-sistem" class="block px-3 py-2 rounded-lg text-sm font-medium text-slate-700 hover:bg-slate-50">Spesifikasi IoT</a>
+      <a href="#liputan-pers" class="block px-3 py-2 rounded-lg text-sm font-medium text-slate-700 hover:bg-slate-50">Liputan Media</a>
+      <a href="#dashboard-monitoring" class="block px-3 py-2 rounded-lg text-sm font-medium text-slate-700 hover:bg-slate-50">Dashboard</a>
+      <a href="#legalitas-hki" class="block px-3 py-2 rounded-lg text-sm font-medium text-slate-700 hover:bg-slate-50">Paten & HKI</a>
+      <a href="#tim-inovasi" class="block px-3 py-2 rounded-lg text-sm font-medium text-slate-700 hover:bg-slate-50">Tim Inovasi</a>
+      <button onclick="openDocumentModal()" class="w-full mt-2 inline-flex items-center justify-center gap-2 px-4 py-2.5 rounded-xl text-xs font-semibold bg-emerald-600 text-white">
+        Unduh Dokumen & HKI
+      </button>
+    </div>
+  </header>
+
+  <!-- ========================================== -->
+  <!-- 2. HERO SECTION DENGAN 4 STATISTIK PENCAPAIAN -->
+  <!-- ========================================== -->
+  <section id="beranda" class="relative pt-16 pb-20 md:pt-24 md:pb-28 bg-gradient-to-b from-white via-emerald-50/25 to-white bg-grid-pattern overflow-hidden">
+    
+    <!-- Ambient Blur Glows -->
+    <div class="absolute top-1/4 -left-48 w-96 h-96 bg-emerald-200/30 rounded-full blur-3xl pointer-events-none"></div>
+    <div class="absolute top-1/3 -right-48 w-96 h-96 bg-teal-200/25 rounded-full blur-3xl pointer-events-none"></div>
+
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative">
+      
+      <!-- Top Pill Tag -->
+      <div class="flex items-center justify-center sm:justify-start">
+        <div class="inline-flex items-center gap-2.5 px-4 py-1.5 rounded-full bg-emerald-50/90 border border-emerald-200/80 text-emerald-800 text-xs font-semibold tracking-wide shadow-sm">
+          <span class="flex h-2 w-2 rounded-full bg-emerald-500 animate-ping"></span>
+          <span>🌱 Pameran Inovasi Abdidaya 2024 / PPK Ormawa</span>
+          <span class="text-emerald-400">•</span>
+          <span class="text-emerald-700">Desa Sajen, Pacet, Mojokerto</span>
+        </div>
+      </div>
+
+      <!-- Main Heading Title -->
+      <div class="mt-8 max-w-5xl">
+        <h1 class="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-extrabold tracking-tight text-slate-900 leading-[1.15]">
+          Pemberdayaan Petani Bawang Merah Melalui Implementasi 
+          <span class="text-gradient">Light Trap</span> 
+          Tenaga Surya Berbasis IoT & LoRa di Desa Sajen, Mojokerto
+        </h1>
+        
+        <!-- Subtitle Description -->
+        <p class="mt-6 text-base sm:text-lg md:text-xl text-slate-600 leading-relaxed max-w-4xl font-normal">
+          Inisiatif teknologi tepat guna kolaboratif tim PPK Ormawa E-BIO PENS dalam mengoptimalkan perlindungan lahan pertanian bawang merah melalui perangkap hama terbarukan berdaya surya, jangkauan sensor nirkabel LoRa hingga 15 KM, dan integrasi dashboard berbasis web terpusat secara real-time.
+        </p>
+      </div>
+
+      <!-- Quick Action Badges -->
+      <div class="mt-8 flex flex-wrap items-center gap-3">
+        <a href="#video-dokumentasi" class="inline-flex items-center gap-2 px-6 py-3 rounded-full text-sm font-semibold bg-emerald-600 hover:bg-emerald-700 text-white shadow-sm hover:shadow-md hover:shadow-emerald-600/20 transition-all">
+          <svg class="w-4 h-4 fill-current" viewBox="0 0 20 20">
+            <path d="M6.3 2.841A1.5 1.5 0 004 4.11v11.78a1.5 1.5 0 002.3 1.269l9.344-5.89a1.5 1.5 0 000-2.538L6.3 2.84z"/>
+          </svg>
+          <span>Tonton Video Dokumentasi</span>
+        </a>
+        <a href="#dashboard-monitoring" class="inline-flex items-center gap-2 px-6 py-3 rounded-full text-sm font-semibold bg-white hover:bg-slate-50 text-slate-700 border border-slate-200 shadow-sm transition-all">
+          <svg class="w-4 h-4 text-emerald-600" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z" />
+          </svg>
+          <span>Lihat Live Dashboard</span>
+        </a>
+      </div>
+
+      <!-- 4 Horizontal Stats Cards (Dimuat secara dinamis via js/render.js) -->
+      <div id="hero-stats-container" class="mt-14 grid grid-cols-2 md:grid-cols-4 gap-4 sm:gap-6"></div>
+
+    </div>
+  </section>
+
+  <!-- ========================================== -->
+  <!-- 3. DOKUMENTASI AUDIOVISUAL (VIDEO PLAYER BESAR) -->
+  <!-- ========================================== -->
+  <section id="video-dokumentasi" class="py-20 md:py-28 bg-white border-t border-slate-100 relative">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      
+      <!-- Section Header -->
+      <div class="flex flex-col md:flex-row md:items-end justify-between mb-10 gap-4">
+        <div>
+          <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-emerald-50 text-emerald-700 text-xs font-semibold uppercase tracking-wider mb-3">
+            <span>DOKUMENTASI AUDIOVISUAL & DEMO ALAT</span>
+          </div>
+          <h2 class="text-2xl sm:text-3xl md:text-4xl font-extrabold text-slate-900 tracking-tight">
+            Dokumentasi Audiovisual: Dari Lahan Sajen untuk Pertanian Masa Depan
+          </h2>
+        </div>
+        <p class="text-sm text-slate-500 max-w-md">
+          Pemaparan komprehensif alur kerja sistem light trap, implementasi jaringan LoRa di lahan terbuka, serta testimoni kelompok tani.
+        </p>
+      </div>
+
+      <!-- Giant Video Player Mockup Container (Embedded YouTube Video) -->
+      <div class="relative w-full rounded-3xl overflow-hidden bg-slate-950 border border-slate-800 shadow-2xl">
+        
+        <!-- Top Status Bar -->
+        <div class="px-5 py-3.5 bg-slate-900 border-b border-slate-800 flex flex-wrap items-center justify-between gap-3 text-xs text-white">
+          <div class="flex items-center gap-2.5">
+            <span class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-red-600 text-white font-bold text-[11px] shadow-sm tracking-wide">
+              <svg class="w-3.5 h-3.5 fill-current" viewBox="0 0 24 24"><path d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"/></svg>
+              YOUTUBE PLAYER
+            </span>
+            <span class="text-slate-300 font-medium hidden sm:inline">Video Profil Tim PPK Ormawa E-BIO PENS</span>
+          </div>
+
+          <div class="flex items-center gap-2">
+            <span class="px-2.5 py-0.5 rounded-full bg-emerald-500/20 text-emerald-400 text-[10px] font-mono font-semibold border border-emerald-500/30">
+              Desa Sajen, Mojokerto
+            </span>
+            <a href="https://youtu.be/LEWnQwhRq6g?si=rc70lAkG0gPZ472T" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-1.5 px-3 py-1 rounded-lg bg-slate-800 hover:bg-slate-700 text-slate-200 hover:text-white transition-colors text-[11px] font-medium border border-slate-700">
+              <span>Buka di YouTube</span>
+              <svg class="w-3 h-3" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" />
+              </svg>
+            </a>
+          </div>
+        </div>
+
+        <!-- Embedded YouTube Responsive Iframe -->
+        <div class="relative w-full aspect-video bg-black">
+          <iframe 
+            id="main-youtube-iframe"
+            class="w-full h-full"
+            src="https://www.youtube.com/embed/LEWnQwhRq6g?rel=0&modestbranding=1" 
+            title="Video Profil PPK Ormawa E-BIO PENS - Light Trap Surya Desa Sajen" 
+            frameborder="0" 
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+            referrerpolicy="strict-origin-when-cross-origin"
+            allowfullscreen>
+          </iframe>
+        </div>
+
+        <!-- Bottom Description Bar -->
+        <div class="p-4 sm:p-5 bg-slate-900 border-t border-slate-800 flex flex-col sm:flex-row items-start sm:items-center justify-between gap-3 text-xs text-slate-300">
+          <div class="flex items-center gap-3">
+            <div class="w-2.5 h-2.5 rounded-full bg-emerald-500 animate-pulse"></div>
+            <span class="text-slate-200 font-semibold text-sm">Dokumentasi Audiovisual: Pemberdayaan Petani Bawang Merah</span>
+          </div>
+          <div class="flex flex-wrap items-center gap-2 text-[11px] text-slate-400">
+            <span class="px-2 py-0.5 rounded bg-slate-800">4K Ultra HD</span>
+            <span class="px-2 py-0.5 rounded bg-slate-800">Abdidaya 2024</span>
+            <span class="px-2 py-0.5 rounded bg-slate-800">IoT & LoRa Telemetry</span>
+          </div>
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ========================================== -->
+  <!-- 4. SPESIFIKASI SISTEM (HARDWARE & ARSITEKTUR LORA) -->
+  <!-- ========================================== -->
+  <section id="spesifikasi-sistem" class="py-20 md:py-28 bg-[#fafcfb] border-t border-slate-100">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      
+      <!-- Section Title Centered -->
+      <div class="text-center max-w-3xl mx-auto mb-16">
+        <div class="inline-flex items-center gap-2 px-3.5 py-1 rounded-full bg-emerald-50 text-emerald-700 text-xs font-semibold tracking-wide border border-emerald-100 mb-3">
+          <span>ARSITEKTUR & SPESIFIKASI SISTEM</span>
+        </div>
+        <h2 class="text-3xl sm:text-4xl font-extrabold text-slate-900 tracking-tight">
+          Sistem Light Trap Tenaga Surya Berbasis IoT & LoRa
+        </h2>
+        <p class="mt-4 text-base text-slate-600 leading-relaxed">
+          Integrasi teknologi energi terbarukan, telemetri jarak jauh nirkabel hemat daya, dan otomatisasi pintar berbasis sensor cuaca untuk perlindungan tanaman bawang merah yang berkelanjutan.
+        </p>
+      </div>
+
+      <!-- Grid Spesifikasi 2 Kolom Komprehensif -->
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-start">
+        
+        <!-- Kolom Kiri: Hardware Unit Trap (5 Cols) -->
+        <div class="lg:col-span-5 bg-white p-8 rounded-3xl border border-slate-100 shadow-soft hover:shadow-card transition-all duration-300">
+          <div class="flex items-center justify-between pb-6 border-b border-slate-100">
+            <div>
+              <span class="text-xs font-mono font-medium text-emerald-600 tracking-wide uppercase">Hardware Node Unit</span>
+              <h3 class="text-xl font-bold text-slate-900 mt-0.5">E-BIO Trap Gen-3 Pro</h3>
+            </div>
+            <span class="px-3 py-1 rounded-full text-xs font-semibold bg-emerald-50 text-emerald-700 border border-emerald-200">
+              Standar SNI / Teruji
+            </span>
+          </div>
+
+          <!-- Fitur Hardware (Dimuat dinamis via js/render.js) -->
+          <div id="hardware-features-container" class="mt-6 space-y-6"></div>
+
+          <!-- Chip Badges Bawah (Dimuat dinamis) -->
+          <div id="hardware-chips-container" class="mt-8 pt-6 border-t border-slate-100 flex flex-wrap gap-2"></div>
+        </div>
+
+        <!-- Kolom Kanan: Arsitektur Jaringan LoRa & Otomatisasi (7 Cols) -->
+        <div class="lg:col-span-7 space-y-6">
+          
+          <div class="bg-white p-8 rounded-3xl border border-slate-100 shadow-soft hover:shadow-card transition-all duration-300">
+            <h3 class="text-lg font-bold text-slate-900 mb-2">Arsitektur Telemetri Jarak Jauh LoRaWAN</h3>
+            <p class="text-xs sm:text-sm text-slate-600 mb-6 leading-relaxed">
+              Memecahkan kendala klasik sinyal internet seluler di lembah persawahan Gunung Welirang melalui teknologi modulasi frekuensi rendah yang menembus halangan geografis.
+            </p>
+
+            <!-- 3 Mini Cards Horizontal (Dimuat dinamis via js/render.js) -->
+            <div id="lora-specs-container" class="grid grid-cols-1 sm:grid-cols-3 gap-4"></div>
+          </div>
+
+          <!-- Highlight Banner Hijau Hutan (Impact & Cost Reduction) -->
+          <div class="p-6 sm:p-8 rounded-3xl bg-gradient-to-br from-forest-900 via-forest-850 to-emerald-900 text-white shadow-xl relative overflow-hidden">
+            <div class="absolute -right-10 -bottom-10 w-48 h-48 bg-emerald-500/20 rounded-full blur-2xl"></div>
+            
+            <div class="relative z-10 flex flex-col sm:flex-row items-start sm:items-center justify-between gap-6">
+              <div>
+                <span class="inline-block px-3 py-1 rounded-full text-[10px] font-mono font-semibold bg-emerald-500/20 text-emerald-300 border border-emerald-400/30 mb-2">
+                  HASIL UJI COBA VALIDASI LAPANGAN GAPOKTAN
+                </span>
+                <h4 class="text-lg font-bold text-white">Efisiensi Nyata untuk Petani Sajen</h4>
+                <p class="text-xs sm:text-sm text-emerald-100/90 mt-1.5 leading-relaxed max-w-xl">
+                  Efektivitas terbukti menurunkan intensitas serangan hama ulat grayak hingga <b>60%</b> serta memangkas pengeluaran semprot pestisida kimiawi dari <b>Rp 4.500.000,-</b> menjadi <b>Rp 1.800.000,-</b> per hektar per musim tanam.
+                </p>
+              </div>
+              <div class="shrink-0 text-center bg-white/10 backdrop-blur-md px-5 py-4 rounded-2xl border border-white/15">
+                <div class="text-2xl sm:text-3xl font-extrabold text-emerald-300">Rp 2,7 Jt</div>
+                <div class="text-[11px] text-emerald-100 font-medium">Penghematan / Ha</div>
+              </div>
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ========================================== -->
+  <!-- 5. LIPUTAN PERS NASIONAL (3 KARTU BERJAJAR) -->
+  <!-- ========================================== -->
+  <section id="liputan-pers" class="py-20 md:py-28 bg-white border-t border-slate-100">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      
+      <!-- Section Header -->
+      <div class="flex flex-col md:flex-row md:items-end justify-between mb-12 gap-4">
+        <div>
+          <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-emerald-50 text-emerald-700 text-xs font-semibold uppercase tracking-wider mb-3">
+            <span>PUBLIKASI & MEDIA MASSA</span>
+          </div>
+          <h2 class="text-2xl sm:text-3xl md:text-4xl font-extrabold text-slate-900 tracking-tight">
+            Liputan Pers Nasional & Televisi Regional
+          </h2>
+        </div>
+        <p class="text-sm text-slate-500 max-w-md">
+          Apresiasi publikasi resmi dari stasiun televisi, lembaga penyiaran radio nasional, dan warta kemahasiswaan kementerian.
+        </p>
+      </div>
+
+      <!-- 3 Kartu Berita Horizontal Grid (Dimuat dinamis via js/render.js) -->
+      <div id="press-articles-container" class="grid grid-cols-1 md:grid-cols-3 gap-8"></div>
+
+    </div>
+  </section>
+
+  <!-- ========================================== -->
+  <!-- 6. LIVE DASHBOARD WEB MONITORING GAPOKTAN -->
+  <!-- ========================================== -->
+  <section id="dashboard-monitoring" class="py-20 md:py-28 bg-[#fafcfb] border-t border-slate-100">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      
+      <!-- Section Title Centered -->
+      <div class="text-center max-w-3xl mx-auto mb-14">
+        <div class="inline-flex items-center gap-2 px-3.5 py-1 rounded-full bg-emerald-50 text-emerald-700 text-xs font-semibold tracking-wide border border-emerald-100 mb-3">
+          <span>SISTEM INFORMASI & MONITORING REAL-TIME</span>
+        </div>
+        <h2 class="text-3xl sm:text-4xl font-extrabold text-slate-900 tracking-tight">
+          Dashboard Monitoring Web Gapoktan Sumber Makmur
+        </h2>
+        <p class="mt-4 text-base text-slate-600 leading-relaxed">
+          Platform terintegrasi berbasis IoT dan light trap tenaga surya untuk monitoring tanaman bawang merah di Desa Sajen, Pacet, Mojokerto. Terhubung langsung dengan server sistem <a href="https://gapoktansumbermakmursajen.web.id/admin" target="_blank" rel="noopener noreferrer" class="text-emerald-600 font-semibold underline underline-offset-2 hover:text-emerald-800">gapoktansumbermakmursajen.web.id/admin</a>.
+        </p>
+      </div>
+
+      <!-- Browser Frame Mockup -->
+      <div class="rounded-3xl border border-slate-200/90 bg-white shadow-2xl overflow-hidden transition-all duration-300">
+        
+        <!-- Browser Header Chrome -->
+        <div class="px-5 py-3.5 bg-slate-50/90 border-b border-slate-200 flex flex-wrap items-center justify-between gap-4">
+          
+          <!-- Window Controls (Red, Yellow, Green Dots) & System Title -->
+          <div class="flex items-center gap-3">
+            <div class="flex items-center gap-2">
+              <span class="w-3 h-3 rounded-full bg-rose-400 border border-rose-500/30"></span>
+              <span class="w-3 h-3 rounded-full bg-amber-400 border border-amber-500/30"></span>
+              <span class="w-3 h-3 rounded-full bg-emerald-400 border border-emerald-500/30"></span>
+            </div>
+            <span class="hidden sm:inline-block text-xs font-semibold text-slate-700 bg-slate-100 px-2.5 py-1 rounded-md border border-slate-200/80">
+              Gapoktan Sumber Makmur • Sistem Informasi Pertanian Pintar
+            </span>
+          </div>
+
+          <!-- URL Bar Address -->
+          <div class="flex-1 max-w-md mx-auto bg-white border border-slate-200 rounded-full px-4 py-1.5 flex items-center justify-between text-xs text-slate-600 shadow-sm">
+            <div class="flex items-center gap-2 truncate">
+              <svg class="w-3.5 h-3.5 text-emerald-600 shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 15v2m-6 4h12a2 2 0 002-2v-6a2 2 0 00-2-2H6a2 2 0 00-2 2v6a2 2 0 002 2zm10-10V7a4 4 0 00-8 0v4h8z" />
+              </svg>
+              <span class="text-slate-400 font-mono">https://</span>
+              <span class="font-mono text-slate-800 font-medium truncate">gapoktansumbermakmursajen.web.id/admin</span>
+            </div>
+            <span class="flex items-center gap-1 text-[11px] font-semibold text-emerald-600 shrink-0">
+              <span class="w-2 h-2 rounded-full bg-emerald-500 animate-pulse"></span>
+              Live Connected
+            </span>
+          </div>
+
+          <!-- Actions: Reload & Buka Tab Baru -->
+          <div class="flex items-center gap-2 text-xs">
+            <button onclick="reloadGapoktanFrame()" class="p-1.5 rounded-lg border border-slate-200 text-slate-500 hover:text-slate-800 hover:bg-slate-100 transition-colors" title="Muat Ulang Halaman Web">
+              <svg class="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 4v5h.582m15.356 2A8.001 8.001 0 004.582 9m0 0H9m11 11v-5h-.581m0 0a8.003 8.003 0 01-15.357-2m15.357 2H15" />
+              </svg>
+            </button>
+            <a href="https://gapoktansumbermakmursajen.web.id/admin" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-lg bg-emerald-600 hover:bg-emerald-700 text-white font-semibold shadow-sm transition-all">
+              <span>Buka Website Asli</span>
+              <svg class="w-3.5 h-3.5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" />
+              </svg>
+            </a>
+          </div>
+
+        </div>
+
+        <!-- LIVE EMBED (Terhubung langsung ke server Gapoktan) -->
+        <div id="dashboard-view-live" class="relative w-full bg-slate-900 overflow-hidden" style="min-height: 750px; height: 85vh;">
+          <iframe 
+            id="gapoktan-live-frame"
+            src="https://gapoktansumbermakmursajen.web.id/admin"
+            class="w-full h-full border-0"
+            title="Dashboard Admin Gapoktan Sumber Makmur"
+            loading="lazy"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+            sandbox="allow-same-origin allow-scripts allow-forms allow-popups allow-modals">
+          </iframe>
+          
+          <!-- Bottom Floating Status Bar inside iframe view -->
+          <div class="absolute bottom-3 right-4 z-10 pointer-events-auto">
+            <div class="px-3.5 py-1.5 rounded-full bg-slate-900/95 backdrop-blur-md border border-slate-700 text-slate-200 text-[11px] font-mono flex items-center gap-2.5 shadow-xl">
+              <span class="w-2 h-2 rounded-full bg-emerald-400 animate-pulse"></span>
+              <span class="truncate max-w-[200px] sm:max-w-xs">gapoktansumbermakmursajen.web.id/admin</span>
+              <button onclick="reloadGapoktanFrame()" class="text-xs text-slate-400 hover:text-emerald-400 transition-colors" title="Muat Ulang">🔄 Reload</button>
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ========================================== -->
+  <!-- 7. LEGALITAS PENCAPAIAN (PATEN & HKI) -->
+  <!-- ========================================== -->
+  <section id="legalitas-hki" class="py-20 md:py-28 bg-white border-t border-slate-100">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      
+      <!-- Section Title Centered -->
+      <div class="text-center max-w-3xl mx-auto mb-16">
+        <div class="inline-flex items-center gap-2 px-3.5 py-1 rounded-full bg-emerald-50 text-emerald-700 text-xs font-semibold tracking-wide border border-emerald-100 mb-3">
+          <span>LEGALITAS, HKI & REKOMENDASI DINAS</span>
+        </div>
+        <h2 class="text-3xl sm:text-4xl font-extrabold text-slate-900 tracking-tight">
+          Sertifikasi Paten HKI & Rekomendasi Dinas Pertanian
+        </h2>
+        <p class="mt-4 text-base text-slate-600 leading-relaxed">
+          Validasi hukum, perlindungan hak kekayaan intelektual (HKI) dari Kemenkumham RI, serta legalitas rekomendasi resmi dinas terkait implementasi lapangan.
+        </p>
+      </div>
+
+      <!-- 4 Horizontal Cards Grid (Dimuat dinamis via js/render.js) -->
+      <div id="legal-items-container" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6"></div>
+
+    </div>
+  </section>
+
+  <!-- ========================================== -->
+  <!-- 8. MEDIA SOSIAL (INSTAGRAM & YOUTUBE) -->
+  <!-- ========================================== -->
+  <section id="media-sosial" class="py-20 md:py-28 bg-[#fafcfb] border-t border-slate-100">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      
+      <!-- Part 1: Feed Instagram Grid 4 Kotak Persegi -->
+      <div class="mb-20">
+        <div class="flex flex-col md:flex-row md:items-end justify-between mb-10 gap-4">
+          <div>
+            <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-emerald-50 text-emerald-700 text-xs font-semibold uppercase tracking-wider mb-3">
+              <span>AKTIVITAS & JEJARING SOSIAL</span>
+            </div>
+            <h2 class="text-2xl sm:text-3xl font-extrabold text-slate-900 tracking-tight">
+              Feed Instagram Resmi Tim PPK Ormawa E-BIO PENS
+            </h2>
+          </div>
+          <div class="flex items-center gap-2">
+            <a href="https://instagram.com" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-2 px-4 py-2 rounded-full border border-slate-200 text-xs font-semibold text-slate-700 hover:border-emerald-500 hover:text-emerald-700 transition-colors bg-white shadow-sm">
+              <svg class="w-4 h-4 text-pink-600" fill="currentColor" viewBox="0 0 24 24"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/></svg>
+              <span>@ppkormawa_ebiopens</span>
+            </a>
+          </div>
+        </div>
+
+        <!-- Grid 4 Persegi Bernuansa Hijau (Dimuat dinamis via js/render.js) -->
+        <div id="instagram-posts-container" class="grid grid-cols-2 md:grid-cols-4 gap-4 sm:gap-6"></div>
+      </div>
+
+      <!-- Part 2: Thumbnail YouTube Grid 3 Kotak Memanjang -->
+      <div>
+        <div class="flex items-center justify-between mb-8">
+          <div>
+            <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-red-50 text-red-600 text-xs font-semibold uppercase tracking-wider mb-2">
+              <span>YOUTUBE CHANNEL • DOKUMENTASI LENGKAP</span>
+            </div>
+            <h3 class="text-xl sm:text-2xl font-bold text-slate-900 tracking-tight">Kanal Video Resmi PPK Ormawa E-BIO PENS</h3>
+          </div>
+          <a href="https://youtu.be/LEWnQwhRq6g?si=rc70lAkG0gPZ472T" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-red-600 hover:bg-red-700 text-white text-xs font-bold shadow-sm transition-all">
+            <svg class="w-4 h-4 fill-current" viewBox="0 0 24 24"><path d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"/></svg>
+            <span>Buka YouTube</span>
+          </a>
+        </div>
+
+        <!-- 3 Horizontal Video Cards (Dimuat dinamis via js/render.js) -->
+        <div id="youtube-videos-container" class="grid grid-cols-1 md:grid-cols-3 gap-6"></div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ========================================== -->
+  <!-- 9. MEET OUR TEAM (BANNER FOTO & DIVISI) -->
+  <!-- ========================================== -->
+  <section id="tim-inovasi" class="py-20 md:py-28 bg-white border-t border-slate-100 relative">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      
+      <!-- Section Title Centered -->
+      <div class="text-center max-w-3xl mx-auto mb-12">
+        <span class="text-xs font-mono font-bold tracking-widest text-emerald-600 uppercase">KOLABORASI MULTIDISIPLIN</span>
+        <h2 class="text-3xl sm:text-4xl md:text-5xl font-extrabold text-slate-900 tracking-tight mt-1">
+          MEET OUR TEAM
+        </h2>
+        <p class="mt-4 text-sm sm:text-base text-slate-600 leading-relaxed">
+          Dedikasi Kolaborasi Multidisiplin Mahasiswa & Dosen Pembimbing Politeknik Elektronika Negeri Surabaya (PENS) untuk Kemajuan Pertanian Desa Sajen.
+        </p>
+      </div>
+
+      <!-- Giant Full-Width Team Banner Container -->
+      <div class="relative w-full rounded-3xl overflow-hidden shadow-2xl border border-slate-100 bg-slate-900 group">
+        <img src="assets/team_banner.jpg" alt="Foto Anggota Tim PPK Ormawa E-BIO PENS" class="w-full h-auto object-cover max-h-[550px] group-hover:scale-102 transition-transform duration-700">
+        
+        <!-- Subtle Top & Bottom Gradient -->
+        <div class="absolute inset-0 bg-gradient-to-t from-slate-950/80 via-transparent to-slate-950/30 pointer-events-none"></div>
+
+        <!-- Banner Floating Overlay Info -->
+        <div class="absolute bottom-6 left-6 right-6 flex flex-col sm:flex-row items-start sm:items-end justify-between gap-4 text-white z-10">
+          <div>
+            <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-emerald-600/90 backdrop-blur-md text-white text-xs font-bold mb-2">
+              🏆 Abdidaya Ormawa 2024 Finalist Team
+            </div>
+            <h3 class="text-lg sm:text-2xl font-bold tracking-tight text-white drop-shadow">
+              Tim PPK Ormawa E-BIO PENS Surabaya
+            </h3>
+            <p class="text-xs sm:text-sm text-slate-200 drop-shadow">
+              Departemen Teknik Elektro, Informatika, Mekatronika, & Telekomunikasi
+            </p>
+          </div>
+          <div class="shrink-0">
+            <span class="inline-flex items-center gap-2 px-4 py-2 rounded-xl bg-white/20 backdrop-blur-md text-xs font-semibold text-white border border-white/20">
+              <svg class="w-4 h-4 text-emerald-400" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z" />
+              </svg>
+              10 Mahasiswa & 1 Dosen Pembimbing
+            </span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Detail Card Tim (Divisi & Peran - Dimuat dinamis via js/render.js) -->
+      <div id="team-divisions-container" class="mt-12 grid grid-cols-2 md:grid-cols-4 gap-4 sm:gap-6"></div>
+
+    </div>
+  </section>
+
+  <!-- ========================================== -->
+  <!-- 10. FOOTER (KEMITRAAN, KONTAK, QR CODE & COPYRIGHT) -->
+  <!-- ========================================== -->
+  <footer id="footer" class="bg-slate-900 text-white pt-20 pb-12 border-t border-slate-800">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      
+      <!-- Top Grid: Kemitraan, Kontak, dan Kotak QR Code -->
+      <div class="grid grid-cols-1 md:grid-cols-12 gap-12 pb-16 border-b border-slate-800">
+        
+        <!-- Kolom Kemitraan & Profil (5 Cols) -->
+        <div class="md:col-span-5 space-y-5">
+          <div class="flex items-center gap-3">
+            <div class="w-10 h-10 rounded-xl bg-emerald-500 flex items-center justify-center text-white shadow-md">
+              <svg class="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 3v1m0 16v1m9-9h-1M4 12H3m15.364 6.364l-.707-.707M6.343 6.343l-.707-.707m12.728 0l-.707.707M6.343 17.657l-.707.707M16 12a4 4 0 11-8 0 4 4 0 018 0z" />
+              </svg>
+            </div>
+            <div>
+              <span class="font-extrabold text-base tracking-tight text-white">PPK ORMAWA E-BIO PENS</span>
+              <p class="text-xs text-emerald-400 font-medium">Politeknik Elektronika Negeri Surabaya</p>
+            </div>
+          </div>
+
+          <p class="text-xs sm:text-sm text-slate-400 leading-relaxed max-w-sm">
+            Program Penguatan Kapasitas Organisasi Kemahasiswaan (PPK Ormawa) Himpunan Mahasiswa Departemen Elektronika PENS. Berkolaborasi dengan Ditjen Belmawa Kemdikbudristek, Pemerintah Desa Sajen, dan Dinas Pertanian Kabupaten Mojokerto.
+          </p>
+
+          <!-- Badges Mitra Kolaborasi -->
+          <div class="pt-2">
+            <div class="text-[11px] font-bold text-slate-400 uppercase tracking-wider mb-2.5">Mitra Strategis Program</div>
+            <div class="flex flex-wrap items-center gap-2">
+              <span class="px-2.5 py-1 rounded-md text-[11px] font-medium bg-slate-800 text-slate-300 border border-slate-700">Belmawa Kemdikbud</span>
+              <span class="px-2.5 py-1 rounded-md text-[11px] font-medium bg-slate-800 text-slate-300 border border-slate-700">PENS Surabaya</span>
+              <span class="px-2.5 py-1 rounded-md text-[11px] font-medium bg-slate-800 text-slate-300 border border-slate-700">Pemdes Desa Sajen</span>
+              <span class="px-2.5 py-1 rounded-md text-[11px] font-medium bg-slate-800 text-slate-300 border border-slate-700">Gapoktan Sumber Makmur</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Kolom Kontak & Sekretariat (3 Cols) -->
+        <div class="md:col-span-3 space-y-4">
+          <h4 class="text-xs font-bold text-slate-300 uppercase tracking-widest font-mono">Sekretariat & Kontak</h4>
+          
+          <div class="space-y-3 text-xs text-slate-400">
+            <div>
+              <span class="block text-slate-300 font-semibold mb-0.5">Kampus Utama:</span>
+              Gedung D4 Teknik Elektronika PENS, Jl. Raya ITS Sukolilo, Surabaya 60111
+            </div>
+            
+            <div>
+              <span class="block text-slate-300 font-semibold mb-0.5">Posko Lapangan:</span>
+              Balai Desa Sajen, Kec. Pacet, Kab. Mojokerto, Jawa Timur
+            </div>
+
+            <div class="pt-2 space-y-1.5">
+              <div class="flex items-center gap-2">
+                <svg class="w-4 h-4 text-emerald-400 shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
+                </svg>
+                <a href="mailto:ebiopens.ppkormawa@pens.ac.id" class="text-slate-300 hover:text-emerald-400 transition-colors font-mono">ebiopens.ppkormawa@pens.ac.id</a>
+              </div>
+              <div class="flex items-center gap-2">
+                <svg class="w-4 h-4 text-emerald-400 shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" />
+                </svg>
+                <span class="text-slate-300 font-mono">+62 813-5789-2024 (Hotline)</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Kolom Khusus QR Code Akses Dokumen (4 Cols) -->
+        <div class="md:col-span-4">
+          <div class="bg-slate-800/80 rounded-3xl p-6 border border-slate-700 text-center shadow-lg">
+            <div class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-emerald-500/20 text-emerald-400 text-[10px] font-mono font-bold mb-3">
+              <span>SCAN QR CODE DOKUMEN</span>
+            </div>
+            
+            <h4 class="text-sm font-bold text-white mb-3">Akses Dokumen Lengkap & HKI</h4>
+            
+            <!-- High-Resolution Crisp QR Vector Code Container -->
+            <div class="mx-auto w-36 h-36 bg-white p-3 rounded-2xl shadow-inner flex items-center justify-center relative group">
+              <svg class="w-full h-full text-slate-900" viewBox="0 0 100 100" fill="currentColor">
+                <!-- Top-Left Finder -->
+                <rect x="5" y="5" width="26" height="26" rx="4" />
+                <rect x="9" y="9" width="18" height="18" fill="white" />
+                <rect x="13" y="13" width="10" height="10" />
+                
+                <!-- Top-Right Finder -->
+                <rect x="69" y="5" width="26" height="26" rx="4" />
+                <rect x="73" y="9" width="18" height="18" fill="white" />
+                <rect x="77" y="13" width="10" height="10" />
+                
+                <!-- Bottom-Left Finder -->
+                <rect x="5" y="69" width="26" height="26" rx="4" />
+                <rect x="9" y="73" width="18" height="18" fill="white" />
+                <rect x="13" y="77" width="10" height="10" />
+                
+                <!-- Data Bits & Patterns -->
+                <rect x="36" y="8" width="6" height="6" />
+                <rect x="46" y="8" width="6" height="6" />
+                <rect x="56" y="8" width="6" height="6" />
+                
+                <rect x="36" y="18" width="6" height="6" />
+                <rect x="46" y="18" width="6" height="6" />
+                <rect x="56" y="18" width="6" height="6" />
+
+                <rect x="8" y="36" width="6" height="6" />
+                <rect x="18" y="36" width="6" height="6" />
+                <rect x="26" y="44" width="6" height="6" />
+                
+                <rect x="36" y="36" width="28" height="28" rx="3" fill="#059669" />
+                <circle cx="50" cy="50" r="8" fill="white" />
+                <path d="M50 46v8m-4-4h8" stroke="#059669" stroke-width="2" />
+
+                <rect x="68" y="36" width="6" height="6" />
+                <rect x="78" y="36" width="6" height="6" />
+                <rect x="86" y="44" width="6" height="6" />
+                <rect x="68" y="52" width="6" height="6" />
+                <rect x="86" y="52" width="6" height="6" />
+
+                <rect x="36" y="68" width="6" height="6" />
+                <rect x="46" y="76" width="6" height="6" />
+                <rect x="56" y="68" width="6" height="6" />
+                <rect x="36" y="86" width="6" height="6" />
+                <rect x="46" y="86" width="6" height="6" />
+                <rect x="56" y="86" width="6" height="6" />
+
+                <rect x="68" y="68" width="6" height="6" />
+                <rect x="78" y="76" width="6" height="6" />
+                <rect x="86" y="86" width="6" height="6" />
+              </svg>
+            </div>
+
+            <p class="mt-3 text-[11px] text-slate-400 leading-snug">
+              Pindai melalui kamera HP untuk mengunduh proposal, laporan teknis, dan sertifikat HKI.
+            </p>
+
+            <button onclick="openDocumentModal()" class="mt-4 w-full py-2.5 rounded-xl bg-emerald-600 hover:bg-emerald-500 text-white text-xs font-semibold shadow-sm transition-all">
+              Buka E-Dokumentasi Cloud ↗
+            </button>
+          </div>
+        </div>
+
+      </div>
+
+      <!-- Bottom Sub-Footer Bar -->
+      <div class="pt-8 flex flex-col sm:flex-row items-center justify-between gap-4 text-xs text-slate-400">
+        <div>
+          © 2024 Tim PPK Ormawa E-BIO PENS • Politeknik Elektronika Negeri Surabaya. Hak Cipta Dilindungi Undang-Undang.
+        </div>
+        <div class="flex items-center gap-6">
+          <a href="#beranda" class="hover:text-emerald-400 transition-colors">Beranda</a>
+          <a href="#spesifikasi-sistem" class="hover:text-emerald-400 transition-colors">Spesifikasi IoT</a>
+          <a href="#legalitas-hki" class="hover:text-emerald-400 transition-colors">Legalitas Paten</a>
+          <a href="#dashboard-monitoring" class="hover:text-emerald-400 transition-colors">Dashboard Live</a>
+        </div>
+      </div>
+
+    </div>
+  </footer>
+
+  <!-- ========================================== -->
+  <!-- MODAL: DOKUMEN & SERTIFIKAT RESMI HKI -->
+  <!-- ========================================== -->
+  <div id="document-modal" class="fixed inset-0 z-50 hidden flex items-center justify-center p-4 bg-slate-950/70 backdrop-blur-sm transition-all duration-300">
+    <div class="bg-white w-full max-w-2xl rounded-3xl p-6 sm:p-8 shadow-2xl border border-slate-100 max-h-[90vh] overflow-y-auto">
+      <div class="flex items-center justify-between pb-4 border-b border-slate-100">
+        <div>
+          <span class="text-xs font-mono font-bold text-emerald-600 uppercase">ARSIP DIGITAL ABDIDAYA</span>
+          <h3 class="text-xl font-bold text-slate-900 mt-0.5">Katalog Dokumen & Legalitas Resmi</h3>
+        </div>
+        <button onclick="closeDocumentModal()" class="p-2 rounded-xl text-slate-400 hover:text-slate-700 hover:bg-slate-100 transition-colors" aria-label="Tutup Modal Dokumen">
+          <svg class="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
+          </svg>
+        </button>
+      </div>
+
+      <!-- Daftar Dokumen (Dimuat dinamis via js/render.js) -->
+      <div id="catalog-documents-container" class="mt-6 space-y-3"></div>
+
+      <div class="mt-8 pt-4 border-t border-slate-100 text-right">
+        <button onclick="closeDocumentModal()" class="px-5 py-2.5 rounded-xl text-xs font-semibold bg-slate-100 text-slate-700 hover:bg-slate-200 transition-colors">
+          Tutup
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <!-- ========================================== -->
+  <!-- MODAL: INTERACTIVE VIDEO PLAYER POPUP -->
+  <!-- ========================================== -->
+  <div id="video-modal" class="fixed inset-0 z-50 hidden flex items-center justify-center p-4 bg-slate-950/85 backdrop-blur-md transition-all duration-300">
+    <div class="bg-black w-full max-w-4xl rounded-3xl overflow-hidden shadow-2xl border border-slate-800 relative">
+      <div class="p-4 bg-slate-900 flex items-center justify-between text-white border-b border-slate-800">
+        <div class="flex items-center gap-2">
+          <span class="w-2.5 h-2.5 rounded-full bg-red-500 animate-pulse"></span>
+          <span class="text-xs font-bold uppercase tracking-wider">Video Profil Resmi YouTube • PPK Ormawa E-BIO PENS</span>
+        </div>
+        <button onclick="closeVideoPlayerModal()" class="p-1 rounded-lg text-slate-400 hover:text-white hover:bg-slate-800 transition-colors" aria-label="Tutup Video Modal">
+          <svg class="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
+          </svg>
+        </button>
+      </div>
+
+      <div class="relative aspect-video bg-black flex items-center justify-center">
+        <!-- Interactive YouTube Iframe in Modal -->
+        <iframe 
+          id="modal-youtube-iframe"
+          class="w-full h-full"
+          src=""
+          data-src="https://www.youtube.com/embed/LEWnQwhRq6g?autoplay=1&rel=0&modestbranding=1" 
+          title="Video Profil Dokumentasi YouTube" 
+          frameborder="0" 
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+          allowfullscreen>
+        </iframe>
+      </div>
+    </div>
+  </div>
+
+  <!-- ========================================== -->
+  <!-- JAVASCRIPT MODULAR (DATA, RENDERER & CONTROLLER) -->
+  <!-- ========================================== -->
+  <script src="js/data.js"></script>
+  <script src="js/render.js"></script>
+  <script src="js/main.js"></script>
+</body>
+</html>
