@@ -1,0 +1,165 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 700 960" width="100%" height="100%">
+  <defs>
+    <filter id="docShadow" x="-10%" y="-5%" width="120%" height="110%">
+      <feDropShadow dx="0" dy="4" stdDeviation="6" flood-opacity="0.12"/>
+    </filter>
+  </defs>
+
+  <!-- Document Sheet (A4 Proportion) -->
+  <rect x="0" y="0" width="700" height="960" fill="#ffffff" stroke="#e2e8f0" stroke-width="1.5"/>
+
+  <!-- Left Margin Line (Subtle Registry Guideline) -->
+  <line x1="45" y1="30" x2="45" y2="930" stroke="#f1f5f9" stroke-width="1"/>
+
+  <!-- 1. KOP SURAT RESMI -->
+  <g transform="translate(60, 45)">
+    <!-- Logo Lambang Pemkab / Gapoktan (Stylized Emblem) -->
+    <g transform="translate(25, 38)">
+      <circle cx="0" cy="0" r="28" fill="#ecfdf5" stroke="#059669" stroke-width="2"/>
+      <!-- Tanaman Padi & Daun -->
+      <path d="M 0,-18 C -10,-8 -12,8 0,18 C 12,8 10,-8 0,-18 Z" fill="#10b981"/>
+      <path d="M -8,0 C -16,-6 -14,-14 -4,-12" stroke="#047857" stroke-width="2" fill="none"/>
+      <path d="M 8,0 C 16,-6 14,-14 4,-12" stroke="#047857" stroke-width="2" fill="none"/>
+      <circle cx="0" cy="0" r="4" fill="#fbbf24"/>
+    </g>
+
+    <!-- Teks Kop Surat -->
+    <text x="310" y="20" text-anchor="middle" font-family="'Plus Jakarta Sans', Arial, sans-serif" font-size="13" font-weight="800" letter-spacing="1.5" fill="#1e293b">PEMERINTAH KABUPATEN MOJOKERTO</text>
+    <text x="310" y="38" text-anchor="middle" font-family="'Plus Jakarta Sans', Arial, sans-serif" font-size="12" font-weight="700" letter-spacing="1" fill="#334155">KECAMATAN PACET — DESA SAJEN</text>
+    <text x="310" y="58" text-anchor="middle" font-family="'Plus Jakarta Sans', Arial, sans-serif" font-size="15" font-weight="900" letter-spacing="0.5" fill="#047857">GABUNGAN KELOMPOK TANI &quot;SUMBER MAKMUR&quot;</text>
+    <text x="310" y="74" text-anchor="middle" font-family="'Plus Jakarta Sans', Arial, sans-serif" font-size="9" font-weight="500" fill="#64748b">Sekretariat: Balai Desa Sajen, Jl. Raya Sajen No. 12, Kec. Pacet, Kab. Mojokerto 61374</text>
+    <text x="310" y="87" text-anchor="middle" font-family="'Plus Jakarta Sans', Arial, sans-serif" font-size="8.5" font-weight="500" fill="#64748b">Laman: gapoktansumbermakmursajen.web.id • Surel: gapoktan.sajen@gmail.com</text>
+
+    <!-- Garis Pembatas Kop Surat Ganda (Garis Tebal & Tipis) -->
+    <line x1="0" y1="102" x2="580" y2="102" stroke="#0f172a" stroke-width="3"/>
+    <line x1="0" y1="107" x2="580" y2="107" stroke="#0f172a" stroke-width="1"/>
+  </g>
+
+  <!-- 2. JUDUL SURAT PERNYATAAN -->
+  <g transform="translate(350, 195)" text-anchor="middle">
+    <text x="0" y="0" font-family="'Plus Jakarta Sans', Georgia, serif" font-size="16" font-weight="900" letter-spacing="1" fill="#0f172a">SURAT PERNYATAAN BERSAMA</text>
+    <text x="0" y="18" font-family="'Plus Jakarta Sans', Arial, sans-serif" font-size="12" font-weight="800" fill="#047857">PEMBENTUKAN UNIT PENGENDALIAN HAMA TERPADU (PHT)</text>
+    <line x1="-190" y1="24" x2="190" y2="24" stroke="#047857" stroke-width="1.5"/>
+    <text x="0" y="38" font-family="'JetBrains Mono', monospace" font-size="10" font-weight="600" fill="#475569">Nomor: 521 / 018 / GAPOKTAN-SJ / X / 2026</text>
+  </g>
+
+  <!-- 3. ISI SURAT PERNYATAAN -->
+  <g transform="translate(70, 270)" font-family="'Plus Jakarta Sans', Arial, sans-serif" font-size="11" fill="#1e293b" line-height="1.6">
+    <text x="0" y="0" font-weight="400">Pada hari ini, <tspan font-weight="700">Rabu tanggal Dua Puluh Tiga bulan Oktober tahun Dua Ribu Dua Puluh Enam</tspan> (23-10-2026),</text>
+    <text x="0" y="18" font-weight="400">bertempat di Balai Desa Sajen, Kecamatan Pacet, Kabupaten Mojokerto, kami yang bertanda tangan</text>
+    <text x="0" y="36" font-weight="400">di bawah ini:</text>
+
+    <!-- Pihak 1 -->
+    <g transform="translate(20, 60)">
+      <text x="0" y="0" font-weight="700" fill="#0f172a">1. Nama / Jabatan</text>
+      <text x="130" y="0" font-weight="700">: SUWANDI (Ketua Gapoktan Sumber Makmur Desa Sajen)</text>
+      <text x="0" y="18" font-weight="400" fill="#475569">   Bertindak atas nama</text>
+      <text x="130" y="18" font-weight="500">: Seluruh Anggota Kelompok Tani Desa Sajen</text>
+    </g>
+
+    <!-- Pihak 2 -->
+    <g transform="translate(20, 105)">
+      <text x="0" y="0" font-weight="700" fill="#0f172a">2. Nama / Jabatan</text>
+      <text x="130" y="0" font-weight="700">: H. SYAMSUL HUDA (Kepala Desa Sajen)</text>
+      <text x="0" y="18" font-weight="400" fill="#475569">   Bertindak atas nama</text>
+      <text x="130" y="18" font-weight="500">: Pemerintah Desa Sajen, Kecamatan Pacet, Mojokerto</text>
+    </g>
+
+    <!-- Pihak 3 -->
+    <g transform="translate(20, 150)">
+      <text x="0" y="0" font-weight="700" fill="#0f172a">3. Nama / Jabatan</text>
+      <text x="130" y="0" font-weight="700">: ADAM FAHRIANSYAH (Ketua Tim PPK Ormawa E-BIO PENS)</text>
+      <text x="0" y="18" font-weight="400" fill="#475569">   Bertindak atas nama</text>
+      <text x="130" y="18" font-weight="500">: Tim Pelaksana Program PPK Ormawa E-BIO PENS</text>
+    </g>
+
+    <!-- Pernyataan Kesepakatan -->
+    <g transform="translate(0, 205)">
+      <text x="0" y="0" font-weight="400">Dengan ini secara bersama-sama menyatakan bersepakat dan berkomitmen untuk:</text>
+      
+      <!-- Poin 1 -->
+      <g transform="translate(15, 25)">
+        <circle cx="2" cy="-4" r="3" fill="#059669"/>
+        <text x="15" y="0" font-weight="700" fill="#0f172a">MEMBENTUK UNIT PENGENDALIAN HAMA TERPADU (PHT) DESA SAJEN</text>
+        <text x="15" y="16" font-weight="400" fill="#475569">Sebagai lembaga otonom di bawah naungan Gapoktan Sumber Makmur untuk mengelola</text>
+        <text x="15" y="32" font-weight="400" fill="#475569">dan mengawal proteksi tanaman hortikultura secara berkelanjutan.</text>
+      </g>
+
+      <!-- Poin 2 -->
+      <g transform="translate(15, 80)">
+        <circle cx="2" cy="-4" r="3" fill="#059669"/>
+        <text x="15" y="0" font-weight="700" fill="#0f172a">OPERASIONALISASI TEKNOLOGI LIGHT TRAP TENAGA SURYA IOT</text>
+        <text x="15" y="16" font-weight="400" fill="#475569">Menjamin 5 (lima) unit Light Trap tenaga surya berbasis LoRa dioperasikan, dirawat secara rutin,</text>
+        <text x="15" y="32" font-weight="400" fill="#475569">dan data sensor tanah/NPK dipantau mandiri melalui dashboard web resmi Gapoktan.</text>
+      </g>
+
+      <!-- Poin 3 -->
+      <g transform="translate(15, 135)">
+        <circle cx="2" cy="-4" r="3" fill="#059669"/>
+        <text x="15" y="0" font-weight="700" fill="#0f172a">KOMITMEN PENGURANGAN PESTISIDA KIMIA SINTETIS</text>
+        <text x="15" y="16" font-weight="400" fill="#475569">Mengurangi intensitas penyemprotan racun kimia secara bertahap menuju pertanian ramah</text>
+        <text x="15" y="32" font-weight="400" fill="#475569">lingkungan demi meningkatkan produktivitas serta kesehatan ekosistem pertanian desa.</text>
+      </g>
+    </g>
+
+    <!-- Penutup -->
+    <text x="0" y="415" font-weight="400">Demikian Surat Pernyataan Bersama ini dibuat dengan sebenar-benarnya tanpa paksaan dari pihak</text>
+    <text x="0" y="433" font-weight="400">manapun, untuk dapat dipergunakan sebagaimana mestinya sebagai bukti legalitas kelembagaan.</text>
+  </g>
+
+  <!-- 4. TEMPAT, TANGGAL & TANDA TANGAN 3 PIHAK -->
+  <g transform="translate(70, 740)">
+    <!-- Info Tanggal -->
+    <text x="440" y="0" text-anchor="center" font-family="'Plus Jakarta Sans', Arial, sans-serif" font-size="10.5" font-weight="500" fill="#1e293b">Sajen, Pacet, 23 Oktober 2026</text>
+
+    <!-- Kolom 1: Ketua Gapoktan -->
+    <g transform="translate(40, 25)" text-anchor="middle" font-family="'Plus Jakarta Sans', Arial, sans-serif">
+      <text x="0" y="0" font-size="10" font-weight="600" fill="#475569">Ketua Gapoktan Sumber Makmur,</text>
+      <!-- Stempel Gapoktan Ungu/Merah -->
+      <circle cx="-15" cy="40" r="28" fill="none" stroke="#7c3aed" stroke-width="1.5" stroke-dasharray="4,2" opacity="0.6"/>
+      <text x="-15" y="38" font-size="7" font-weight="800" fill="#7c3aed" opacity="0.7">GAPOKTAN</text>
+      <text x="-15" y="47" font-size="6" font-weight="700" fill="#7c3aed" opacity="0.7">SUMBER MAKMUR</text>
+      <!-- Simulated Signature -->
+      <path d="M -30,45 Q -10,15 5,40 T 35,35" stroke="#1e293b" stroke-width="2" fill="none"/>
+      <!-- Nama & Garis Bawah -->
+      <text x="0" y="78" font-size="11" font-weight="800" fill="#0f172a">SUWANDI</text>
+      <line x1="-55" y1="82" x2="55" y2="82" stroke="#0f172a" stroke-width="1"/>
+    </g>
+
+    <!-- Kolom 2: Koordinator PPK Ormawa -->
+    <g transform="translate(280, 25)" text-anchor="middle" font-family="'Plus Jakarta Sans', Arial, sans-serif">
+      <text x="0" y="0" font-size="10" font-weight="600" fill="#475569">Koordinator PPK Ormawa PENS,</text>
+      <!-- Stempel Ormawa Biru -->
+      <circle cx="15" cy="40" r="28" fill="none" stroke="#2563eb" stroke-width="1.5" stroke-dasharray="4,2" opacity="0.6"/>
+      <text x="15" y="38" font-size="7" font-weight="800" fill="#2563eb" opacity="0.7">E-BIO PENS</text>
+      <text x="15" y="47" font-size="6" font-weight="700" fill="#2563eb" opacity="0.7">SURABAYA</text>
+      <!-- Simulated Signature -->
+      <path d="M -25,40 Q -5,10 15,35 T 35,42" stroke="#1e293b" stroke-width="2" fill="none"/>
+      <!-- Nama & Garis Bawah -->
+      <text x="0" y="78" font-size="11" font-weight="800" fill="#0f172a">ADAM FAHRIANSYAH</text>
+      <line x1="-65" y1="82" x2="65" y2="82" stroke="#0f172a" stroke-width="1"/>
+      <text x="0" y="93" font-size="9" font-family="'JetBrains Mono', monospace" fill="#64748b">NRP. 2221600045</text>
+    </g>
+
+    <!-- Kolom 3: Mengetahui Kepala Desa -->
+    <g transform="translate(490, 25)" text-anchor="middle" font-family="'Plus Jakarta Sans', Arial, sans-serif">
+      <text x="0" y="0" font-size="10" font-weight="600" fill="#475569">Mengetahui, Kepala Desa Sajen</text>
+      <!-- Stempel Resmi Desa Merah/Biru -->
+      <circle cx="-5" cy="40" r="30" fill="none" stroke="#dc2626" stroke-width="1.5" opacity="0.65"/>
+      <circle cx="-5" cy="40" r="25" fill="none" stroke="#dc2626" stroke-width="0.8" opacity="0.65"/>
+      <text x="-5" y="37" font-size="6.5" font-weight="800" fill="#dc2626" opacity="0.75">PEMERINTAH DESA</text>
+      <text x="-5" y="47" font-size="6.5" font-weight="800" fill="#dc2626" opacity="0.75">SAJEN - PACET</text>
+      <!-- Simulated Signature -->
+      <path d="M -28,38 Q 0,12 18,36 T 38,30" stroke="#1e293b" stroke-width="2" fill="none"/>
+      <!-- Nama & Garis Bawah -->
+      <text x="0" y="78" font-size="11" font-weight="800" fill="#0f172a">H. SYAMSUL HUDA</text>
+      <line x1="-60" y1="82" x2="60" y2="82" stroke="#0f172a" stroke-width="1"/>
+      <text x="0" y="93" font-size="9" font-family="'JetBrains Mono', monospace" fill="#64748b">NIP. 19740512 200212 1 004</text>
+    </g>
+  </g>
+
+  <!-- Document Security Stamp & Badge Bottom Left -->
+  <g transform="translate(60, 915)" font-family="'JetBrains Mono', monospace" font-size="7.5" fill="#94a3b8">
+    <text x="0" y="0">DOKUMEN RESMI GAPOKTAN SUMBER MAKMUR DESA SAJEN • ARSIP RESMI PROGRAM</text>
+  </g>
+</svg>

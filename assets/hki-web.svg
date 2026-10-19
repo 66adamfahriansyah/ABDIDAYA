@@ -1,0 +1,122 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 560" width="100%" height="100%">
+  <defs>
+    <linearGradient id="bgGradWeb" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#f8fafc"/>
+      <stop offset="100%" stop-color="#eff6ff"/>
+    </linearGradient>
+    <linearGradient id="blueBorderWeb" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#2563eb"/>
+      <stop offset="25%" stop-color="#60a5fa"/>
+      <stop offset="50%" stop-color="#1d4ed8"/>
+      <stop offset="75%" stop-color="#3b82f6"/>
+      <stop offset="100%" stop-color="#1e3a8a"/>
+    </linearGradient>
+    <linearGradient id="sealGradWeb" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#2563eb"/>
+      <stop offset="50%" stop-color="#1d4ed8"/>
+      <stop offset="100%" stop-color="#1e3a8a"/>
+    </linearGradient>
+    <pattern id="guillocheWeb" width="40" height="40" patternUnits="userSpaceOnUse">
+      <path d="M 0,20 Q 10,0 20,20 T 40,20" fill="none" stroke="#3b82f6" stroke-width="0.35" opacity="0.16"/>
+      <path d="M 20,0 Q 0,10 20,20 T 20,40" fill="none" stroke="#3b82f6" stroke-width="0.35" opacity="0.16"/>
+    </pattern>
+  </defs>
+
+  <!-- Background Base -->
+  <rect x="0" y="0" width="800" height="560" rx="16" fill="url(#bgGradWeb)" stroke="#bfdbfe" stroke-width="2"/>
+  <rect x="18" y="18" width="764" height="524" rx="10" fill="url(#guillocheWeb)"/>
+
+  <!-- Ornate Double Borders -->
+  <rect x="22" y="22" width="756" height="516" rx="8" fill="none" stroke="url(#blueBorderWeb)" stroke-width="3"/>
+  <rect x="30" y="30" width="740" height="500" rx="6" fill="none" stroke="#1d4ed8" stroke-width="1" stroke-dasharray="8,4" opacity="0.6"/>
+
+  <!-- Corner Flourishes -->
+  <g stroke="#1d4ed8" stroke-width="1.5" fill="none" opacity="0.75">
+    <path d="M 38 60 L 60 38 M 38 70 L 70 38 M 42 42 L 54 42 L 42 54 Z"/>
+    <path d="M 762 60 L 740 38 M 762 70 L 730 38 M 758 42 L 746 42 L 758 54 Z"/>
+    <path d="M 38 500 L 60 522 M 38 490 L 70 522 M 42 518 L 54 518 L 42 506 Z"/>
+    <path d="M 762 500 L 740 522 M 762 490 L 730 522 M 758 518 L 746 518 L 758 506 Z"/>
+  </g>
+
+  <!-- Header: Lambang Garuda / Kemenkumham Stylized -->
+  <g transform="translate(400, 75)" text-anchor="middle">
+    <circle cx="0" cy="0" r="26" fill="#eff6ff" stroke="#2563eb" stroke-width="1.5"/>
+    <path d="M -12,-6 C -18,-14 -6,-20 0,-18 C 6,-20 18,-14 12,-6 C 16,-2 18,8 10,14 C 6,18 0,20 0,20 C 0,20 -6,18 -10,14 C -18,8 -16,-2 -12,-6 Z" fill="#1d4ed8"/>
+    <circle cx="0" cy="0" r="7" fill="#93c5fd"/>
+    <polygon points="0,-4 2,-1 5,-1 3,1 4,4 0,2 -4,4 -3,1 -5,-1 -2,-1" fill="#1e3a8a"/>
+  </g>
+
+  <!-- Republic Header Titles -->
+  <text x="400" y="122" text-anchor="middle" font-family="'Plus Jakarta Sans', Arial, sans-serif" font-size="11" font-weight="700" letter-spacing="3" fill="#1d4ed8">KEMENTERIAN HUKUM DAN HAK ASASI MANUSIA RI</text>
+  <text x="400" y="138" text-anchor="middle" font-family="'Plus Jakarta Sans', Arial, sans-serif" font-size="9" font-weight="600" letter-spacing="2" fill="#1e40af">DIREKTORAT JENDERAL KEKAYAAN INTELEKTUAL</text>
+
+  <!-- Title of Certificate -->
+  <text x="400" y="174" text-anchor="middle" font-family="Georgia, serif" font-size="22" font-weight="bold" fill="#0f172a" letter-spacing="1">SURAT PENCATATAN CIPTAAN</text>
+  <text x="400" y="194" text-anchor="middle" font-family="'Plus Jakarta Sans', Arial, sans-serif" font-size="13" font-weight="700" fill="#2563eb">HAK CIPTA PROGRAM KOMPUTER</text>
+  <line x1="260" y1="204" x2="540" y2="204" stroke="url(#blueBorderWeb)" stroke-width="1.5"/>
+
+  <!-- Registration Number Badge -->
+  <g transform="translate(400, 226)">
+    <rect x="-140" y="-14" width="280" height="28" rx="14" fill="#eff6ff" stroke="#2563eb" stroke-width="1"/>
+    <text x="0" y="5" text-anchor="middle" font-family="'JetBrains Mono', monospace, sans-serif" font-size="12" font-weight="700" fill="#1d4ed8">NO. EC00202411543</text>
+  </g>
+
+  <!-- Certificate Body Details (2 Columns) -->
+  <g transform="translate(100, 280)" font-family="'Plus Jakarta Sans', Arial, sans-serif" font-size="12">
+    <text x="0" y="0" font-weight="600" fill="#64748b">Judul Ciptaan Software</text>
+    <text x="160" y="0" font-weight="700" fill="#0f172a">: Web Dashboard Telemetri IoT &amp; LoRa Pertanian Cerdas</text>
+
+    <text x="0" y="28" font-weight="600" fill="#64748b">Jenis Ciptaan</text>
+    <text x="160" y="28" font-weight="700" fill="#0f172a">: Program Komputer (Software &amp; Sistem Antarmuka Web)</text>
+
+    <text x="0" y="56" font-weight="600" fill="#64748b">Nama Pencipta</text>
+    <text x="160" y="56" font-weight="700" fill="#2563eb">: PPK Ormawa E-BIO PENS Surabaya</text>
+
+    <text x="0" y="84" font-weight="600" fill="#64748b">Tanggal Pencatatan</text>
+    <text x="160" y="84" font-weight="700" fill="#0f172a">: 28 Oktober 2024</text>
+
+    <text x="0" y="112" font-weight="600" fill="#64748b">Status Hukum</text>
+    <text x="160" y="112" font-weight="700" fill="#1d4ed8">: SURAT PENCATATAN SAH (DILINDUNGI UU HAK CIPTA)</text>
+  </g>
+
+  <!-- Official Blue Seal Ribbon Bottom Left -->
+  <g transform="translate(140, 460)">
+    <!-- Ribbon tails -->
+    <path d="M -16,10 L -22,46 L -6,36 L 10,46 L 4,10 Z" fill="#1e40af" opacity="0.9"/>
+    <path d="M 4,10 L -2,46 L 14,36 L 30,46 L 24,10 Z" fill="#1d4ed8"/>
+    <!-- Medallion Outer -->
+    <circle cx="4" cy="4" r="32" fill="url(#sealGradWeb)" stroke="#bfdbfe" stroke-width="2"/>
+    <circle cx="4" cy="4" r="27" fill="none" stroke="#bfdbfe" stroke-width="1" stroke-dasharray="3,2"/>
+    <!-- Seal Star & Text -->
+    <text x="4" y="-3" text-anchor="middle" font-family="'Plus Jakarta Sans', sans-serif" font-size="7" font-weight="800" fill="#bfdbfe" letter-spacing="1">SOFTWARE</text>
+    <polygon points="4,2 6,7 11,7 7,10 9,15 4,12 -1,15 1,10 -3,7 2,7" fill="#93c5fd"/>
+    <text x="4" y="24" text-anchor="middle" font-family="'Plus Jakarta Sans', sans-serif" font-size="6" font-weight="700" fill="#bfdbfe" letter-spacing="0.5">TERCATAT</text>
+  </g>
+
+  <!-- Barcode & QR Code Mockup Bottom Right -->
+  <g transform="translate(620, 430)">
+    <rect x="-35" y="-10" width="70" height="70" rx="6" fill="#ffffff" stroke="#bfdbfe" stroke-width="1.5"/>
+    <rect x="-28" y="-3" width="16" height="16" fill="#1d4ed8"/>
+    <rect x="-25" y="0" width="10" height="10" fill="#ffffff"/>
+    <rect x="-22" y="3" width="4" height="4" fill="#1d4ed8"/>
+
+    <rect x="12" y="-3" width="16" height="16" fill="#1d4ed8"/>
+    <rect x="15" y="0" width="10" height="10" fill="#ffffff"/>
+    <rect x="18" y="3" width="4" height="4" fill="#1d4ed8"/>
+
+    <rect x="-28" y="37" width="16" height="16" fill="#1d4ed8"/>
+    <rect x="-25" y="40" width="10" height="10" fill="#ffffff"/>
+    <rect x="-22" y="43" width="4" height="4" fill="#1d4ed8"/>
+
+    <rect x="-5" y="5" width="6" height="6" fill="#1d4ed8"/>
+    <rect x="5" y="25" width="8" height="4" fill="#1d4ed8"/>
+    <rect x="-5" y="35" width="6" height="6" fill="#1d4ed8"/>
+    <rect x="8" y="42" width="14" height="6" fill="#1d4ed8"/>
+    <rect x="-3" y="18" width="12" height="4" fill="#1d4ed8"/>
+
+    <text x="0" y="74" text-anchor="middle" font-family="'JetBrains Mono', monospace" font-size="8" fill="#64748b">VERIFIKASI SOFTWARE</text>
+  </g>
+
+  <!-- Watermark Diagonal -->
+  <text x="400" y="370" text-anchor="middle" font-family="'Plus Jakarta Sans', sans-serif" font-size="34" font-weight="900" fill="#3b82f6" opacity="0.08" transform="rotate(-15, 400, 370)">HAK CIPTA SOFTWARE WEB</text>
+</svg>

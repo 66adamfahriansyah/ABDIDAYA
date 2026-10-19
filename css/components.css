@@ -1,0 +1,94 @@
+/**
+ * E-BIO PENS — UI Components & Widgets
+ * Styling elemen antarmuka, glassmorphism, scrollbar kustom, dan widget Back-to-Top
+ */
+
+/* Glassmorphism Pill */
+.glass-pill {
+  background: rgba(255, 255, 255, 0.85);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1px solid rgba(6, 78, 59, 0.1);
+}
+
+/* Scrollbar Kustom Halus */
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: #f1f5f9;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #cbd5e1;
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #94a3b8;
+}
+
+/* Top Scroll Reading Progress Bar */
+#scroll-progress-bar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 3.5px;
+  width: 0%;
+  background: linear-gradient(90deg, #059669 0%, #10b981 50%, #34d399 100%);
+  z-index: 100;
+  transition: width 0.1s cubic-bezier(0.25, 1, 0.5, 1);
+  box-shadow: 0 0 10px rgba(16, 185, 129, 0.5);
+}
+
+/* Floating Back-to-Top Widget */
+#back-to-top {
+  opacity: 0;
+  visibility: hidden;
+  transform: translateY(16px) scale(0.9);
+  transition: all 0.35s cubic-bezier(0.16, 1, 0.3, 1);
+  pointer-events: none;
+}
+
+#back-to-top.visible {
+  opacity: 1;
+  visibility: visible;
+  transform: translateY(0) scale(1);
+  pointer-events: auto;
+}
+
+/* Leaflet Custom Map Markers & Modern Popups */
+.custom-map-marker-unit,
+.custom-map-marker-gateway {
+  background: transparent;
+  border: none;
+}
+
+.leaflet-popup-content-wrapper {
+  border-radius: 1.25rem;
+  box-shadow: 0 20px 30px -10px rgba(15, 23, 42, 0.25);
+  border: 1px solid #e2e8f0;
+  padding: 0;
+  overflow: hidden;
+}
+
+.leaflet-popup-content {
+  margin: 0;
+  line-height: 1.4;
+}
+
+.leaflet-container {
+  font-family: inherit;
+}
+
+/* Sajen Deployment Map Full Canvas Rules */
+#sajen-deployment-map {
+  width: 100% !important;
+  height: 520px !important;
+  min-height: 460px !important;
+  position: relative !important;
+  display: block !important;
+  background-color: #f1f5f9;
+}

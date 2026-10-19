@@ -1,0 +1,31 @@
+/**
+ * E-BIO PENS — Typography & Text Styling
+ * Pengaturan font, teks hero kontras, dan efek gradien teks
+ */
+
+/* Hijau hutan pekat elegan untuk judul utama */
+.text-hero-headline {
+  color: #064e3b;
+}
+
+/* Keterbacaan Teks Hero di atas Foto Background */
+.hero-subtitle-readable {
+  color: #ffffff;
+  font-weight: 700;
+  text-shadow: 0 2px 5px rgba(0, 0, 0, 0.85), 0 1px 2px rgba(0, 0, 0, 0.95);
+}
+
+/* Kartu transparan tipis untuk kontras ekstra */
+.hero-subtitle-card {
+  background: rgba(255, 255, 255, 0.65);
+  backdrop-filter: blur(4px);
+  -webkit-backdrop-filter: blur(4px);
+  border: 1px solid rgba(255, 255, 255, 0.8);
+}
+
+/* Gradien Teks Emerald Elegan */
+.text-gradient {
+  background: linear-gradient(135deg, #059669 0%, #047857 50%, #064e3b 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}

@@ -1,100 +1,35 @@
 /**
- * E-BIO PENS — Main Application Logic & Interactivity
- * Mengelola navigasi responsif, kontrol modal, interaksi frame, dan lifecycle halaman
+ * E-BIO PENS — Main Application Entry Point
+ * Menginisialisasi seluruh subsistem aplikasi: data rendering, navigasi, modal, dan animasi interaktif
  */
 
-// Mobile Navigation Logic
-function initMobileNavigation() {
-  const mobileBtn = document.getElementById('mobile-menu-btn');
-  const mobileMenu = document.getElementById('mobile-menu');
-
-  if (mobileBtn && mobileMenu) {
-    mobileBtn.addEventListener('click', () => {
-      mobileMenu.classList.toggle('hidden');
-    });
-
-    // Tutup menu mobile ketika link navigasi diklik
-    document.querySelectorAll('#mobile-menu a').forEach(link => {
-      link.addEventListener('click', () => {
-        mobileMenu.classList.add('hidden');
-      });
-    });
-  }
-}
-
-// Modal Dokumen & Sertifikat Resmi HKI
-function openDocumentModal() {
-  const modal = document.getElementById('document-modal');
-  if (modal) {
-    modal.classList.remove('hidden');
-    document.body.classList.add('overflow-hidden');
-  }
-}
-
-function closeDocumentModal() {
-  const modal = document.getElementById('document-modal');
-  if (modal) {
-    modal.classList.add('hidden');
-    document.body.classList.remove('overflow-hidden');
-  }
-}
-
-// Modal Video Player YouTube
-function openVideoPlayerModal() {
-  const modal = document.getElementById('video-modal');
-  const iframe = document.getElementById('modal-youtube-iframe');
-  if (iframe && iframe.getAttribute('data-src')) {
-    iframe.src = iframe.getAttribute('data-src');
-  }
-  if (modal) {
-    modal.classList.remove('hidden');
-    document.body.classList.add('overflow-hidden');
-  }
-}
-
-function closeVideoPlayerModal() {
-  const modal = document.getElementById('video-modal');
-  const iframe = document.getElementById('modal-youtube-iframe');
-  if (iframe) {
-    iframe.src = '';
-  }
-  if (modal) {
-    modal.classList.add('hidden');
-    document.body.classList.remove('overflow-hidden');
-  }
-}
-
-// Muat Ulang Live Frame Dashboard Admin Gapoktan
-function reloadGapoktanFrame() {
-  const frame = document.getElementById('gapoktan-live-frame');
-  if (frame) {
-    frame.src = "https://gapoktansumbermakmursajen.web.id/admin";
-  }
-}
-
-// Listener Keyboard Global (Tutup modal dengan tombol Escape)
-function initKeyboardListeners() {
-  window.addEventListener('keydown', (e) => {
-    if (e.key === 'Escape') {
-      closeDocumentModal();
-      closeVideoPlayerModal();
-    }
-  });
-}
-
-// Inisialisasi Aplikasi Saat Halaman Siap
 function initApp() {
-  // 1. Render seluruh komponen data ke dalam container
-  if (typeof EBIORenderer !== 'undefined' && EBIORenderer.initAll) {
+  // 0. Inisialisasi Tema (Dark/Light Mode)
+  if (typeof initTheme === 'function') initTheme();
+
+  // 1. Eksekusi Rendering Seluruh Komponen Dinamis dari Data Store
+  if (typeof EBIORenderer !== 'undefined' && typeof EBIORenderer.initAll === 'function') {
     EBIORenderer.initAll();
   }
 
-  // 2. Inisialisasi event listener interaktif
-  initMobileNavigation();
-  initKeyboardListeners();
+  // 2. Inisialisasi Navigasi Responsif & Active Scroll Spy
+  if (typeof initMobileNavigation === 'function') initMobileNavigation();
+  if (typeof initScrollSpy === 'function') initScrollSpy();
+
+  // 3. Inisialisasi Kontrol Modal & Lightbox Keyboard Listeners
+  if (typeof initModalListeners === 'function') initModalListeners();
+
+  // 4. Inisialisasi Peta Geospasial Interaktif Desa Sajen
+  if (typeof initSajenDeploymentMap === 'function') initSajenDeploymentMap();
+
+  // 5. Inisialisasi Animasi & Efek Interaktif Modern
+  if (typeof initScrollProgressAndBackToTop === 'function') initScrollProgressAndBackToTop();
+  if (typeof initScrollReveal === 'function') initScrollReveal();
+  if (typeof initCounters === 'function') initCounters();
+  if (typeof initHeroTilt === 'function') initHeroTilt();
 }
 
-// Jalankan ketika DOM sudah siap
+// Jalankan ketika seluruh struktur DOM telah siap
 if (document.readyState === 'loading') {
   document.addEventListener('DOMContentLoaded', initApp);
 } else {

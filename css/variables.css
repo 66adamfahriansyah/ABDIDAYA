@@ -1,0 +1,196 @@
+/**
+ * E-BIO PENS — Variables & Base Tokens
+ * Konfigurasi tema warna, latar belakang kustom, dan variabel desain dasar
+ */
+
+:root {
+  /* Gambar latar kustom aktif */
+  --hero-bg-image: url('../assets/backgroundnew.jpg');
+
+  /* Palet Warna Primer Pertanian Cerdas */
+  --color-primary: #059669;        /* emerald-600 */
+  --color-primary-dark: #064e3b;   /* emerald-900 / forest */
+  --color-accent: #10b981;         /* emerald-500 */
+  --color-surface: #ffffff;
+  --color-surface-soft: #fafcfb;
+}
+
+/* Background Kustom Hero (Halaman Pertama) */
+.hero-custom-bg {
+  background-image: var(--hero-bg-image);
+  background-position: center 35%;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+/* Pola Grid Agraria Halus */
+.bg-grid-pattern {
+  background-size: 24px 24px;
+  background-image: 
+    linear-gradient(to right, rgba(6, 78, 59, 0.05) 1px, transparent 1px),
+    linear-gradient(to bottom, rgba(6, 78, 59, 0.05) 1px, transparent 1px);
+}
+
+/* ========================================== */
+/* DARK MODE DESIGN SYSTEM                    */
+/* ========================================== */
+html.dark {
+  color-scheme: dark;
+}
+
+html.dark,
+html.dark body {
+  background-color: #070b13 !important;
+  color: #f1f5f9 !important;
+}
+
+/* Header & Navigation in Dark Mode */
+html.dark header,
+html.dark header[class*="bg-white"] {
+  background-color: rgba(11, 18, 32, 0.92) !important;
+  border-bottom-color: #1e293b !important;
+  box-shadow: 0 4px 20px -2px rgba(0, 0, 0, 0.5) !important;
+}
+
+html.dark header nav,
+html.dark header nav[class*="bg-slate-"] {
+  background-color: rgba(15, 23, 42, 0.85) !important;
+  border-color: rgba(51, 65, 85, 0.7) !important;
+}
+
+html.dark header nav a {
+  color: #94a3b8 !important;
+}
+
+html.dark header nav a:hover,
+html.dark header nav a[class*="bg-white"] {
+  background-color: #1e293b !important;
+  color: #34d399 !important;
+  border-color: rgba(16, 185, 129, 0.4) !important;
+}
+
+/* All Sections */
+html.dark section {
+  background-color: #070b13 !important;
+  border-color: #1e293b !important;
+}
+
+html.dark section[class*="bg-white"] {
+  background-color: #0b1220 !important;
+}
+
+html.dark section[class*="fafcfb"],
+html.dark [class*="fafcfb"] {
+  background-color: #070b13 !important;
+}
+
+/* All Cards, Boxes, and Containers */
+html.dark [class*="bg-white"] {
+  background-color: #0e1726 !important;
+}
+
+html.dark [class*="bg-slate-50"] {
+  background-color: #0b1220 !important;
+}
+
+html.dark [class*="bg-slate-100"] {
+  background-color: #141f33 !important;
+}
+
+/* Light Gray Borders */
+html.dark [class*="border-slate-"],
+html.dark [class*="border-gray-"] {
+  border-color: #1e293b !important;
+}
+
+/* Headings & Text Colors */
+html.dark h1,
+html.dark h2,
+html.dark h3,
+html.dark h4,
+html.dark h5,
+html.dark [class*="text-slate-900"],
+html.dark [class*="text-slate-800"] {
+  color: #f8fafc !important;
+}
+
+html.dark p,
+html.dark [class*="text-slate-700"],
+html.dark [class*="text-slate-600"] {
+  color: #cbd5e1 !important;
+}
+
+html.dark [class*="text-slate-500"],
+html.dark [class*="text-slate-400"] {
+  color: #94a3b8 !important;
+}
+
+/* Emerald Badges & Pills in Dark Mode */
+html.dark [class*="bg-emerald-50"] {
+  background-color: rgba(6, 78, 59, 0.45) !important;
+  border-color: rgba(16, 185, 129, 0.35) !important;
+}
+
+html.dark [class*="text-emerald-700"],
+html.dark [class*="text-emerald-800"],
+html.dark [class*="text-emerald-900"] {
+  color: #6ee7b7 !important;
+}
+
+/* Grid Pattern in Dark Mode */
+html.dark .bg-grid-pattern {
+  background-image: 
+    linear-gradient(to right, rgba(16, 185, 129, 0.08) 1px, transparent 1px),
+    linear-gradient(to bottom, rgba(16, 185, 129, 0.08) 1px, transparent 1px) !important;
+}
+
+/* Modals & Dropdowns in Dark Mode */
+html.dark #document-modal > div,
+html.dark #image-preview-modal > div {
+  background-color: #0e1726 !important;
+  border-color: #1e293b !important;
+}
+
+html.dark #mobile-menu {
+  background-color: rgba(11, 18, 32, 0.98) !important;
+  border-color: #1e293b !important;
+}
+
+html.dark #mobile-menu a {
+  color: #cbd5e1 !important;
+}
+
+html.dark #mobile-menu a:hover {
+  background-color: #1e293b !important;
+  color: #34d399 !important;
+}
+
+/* Theme Toggle Button in Dark Mode */
+html.dark #theme-toggle-btn,
+html.dark #theme-toggle-btn-mobile {
+  background-color: #1e293b !important;
+  border-color: #334155 !important;
+  color: #f1f5f9 !important;
+}
+
+html.dark #theme-text {
+  color: #e2e8f0 !important;
+}
+
+/* Leaflet Map in Dark Mode */
+html.dark .leaflet-container {
+  background-color: #0b1220 !important;
+}
+
+/* Scrollbar in Dark Mode */
+html.dark ::-webkit-scrollbar-track {
+  background: #070b13;
+}
+
+html.dark ::-webkit-scrollbar-thumb {
+  background: #334155;
+}
+
+html.dark ::-webkit-scrollbar-thumb:hover {
+  background: #475569;
+}
