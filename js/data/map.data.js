@@ -10,6 +10,21 @@
 const mapDeploymentData = {
   center: [-7.661200, 112.528775],
   defaultZoom: 19,
+  landBoundary: {
+    name: "Batas Area Lahan Demplot Bawang Merah",
+    areaHa: "2,0 Ha",
+    farmerGroup: "Gapoktan Sumber Makmur",
+    location: "Desa Sajen, Pacet, Mojokerto",
+    description: "Kawasan hamparan lahan pertanian bawang merah seluas 2,0 Ha yang terproteksi oleh sistem monitoring E-BIO PENS dengan 5 unit Light Trap dan Gateway LoRa.",
+    coordinates: [
+      [-7.660880, 112.528520],
+      [-7.660940, 112.529080],
+      [-7.661180, 112.529140],
+      [-7.661420, 112.528990],
+      [-7.661400, 112.528610],
+      [-7.661160, 112.528420]
+    ]
+  },
   npkSummary: {
     nitrogen: "45 mg/kg (0.45%)",
     phosphorus: "30 mg/kg (68.7 ppm)",

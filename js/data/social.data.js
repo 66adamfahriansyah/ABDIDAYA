@@ -3,25 +3,12 @@
  * Menyimpan data feed Instagram dan video YouTube resmi
  */
 
-// 1. Postingan Instagram Reels Resmi PPKO E-BIO PENS
+// 1. Postingan Instagram Reels Resmi PPKO E-BIO PENS (3 Feed Utama)
 const instagramPostsData = [
-  {
-    id: "Ddp1d2YJ9Ly",
-    tag: "Serah Terima Alat",
-    postNum: "REEL #01",
-    title: "Serah Terima Alat: Era Baru Smart Farming Desa Sajen",
-    desc: "Inovasi Light Trap Surya IoT LoRa resmi diserahkan sepenuhnya kepada masyarakat & Unit PHT Desa Sajen.",
-    url: "https://www.instagram.com/reel/Ddp1d2YJ9Ly/?utm_source=ig_web_copy_link&dlrf=MzRlODBiNWFlZA==&srtk=MzRlODBiNWFlZA==",
-    gradient: "from-emerald-800 via-emerald-900 to-slate-950",
-    badge: "Instagram Reel",
-    date: "23 Sep 2026",
-    likes: "Lihat di IG",
-    comments: "Instagram"
-  },
   {
     id: "DdORfvyxGv4",
     tag: "Sosialisasi Petani",
-    postNum: "REEL #02",
+    postNum: "REEL #01",
     title: "Sosialisasi & Edukasi Petani Bawang Merah",
     desc: "Edukasi teknologi light trap ramah lingkungan serta perawatan panel surya bersama Gapoktan Sumber Makmur.",
     url: "https://www.instagram.com/reel/DdORfvyxGv4/?utm_source=ig_web_copy_link&psln=MzRlODBiNWFlZA==&srtk=MzRlODBiNWFlZA==",
@@ -34,7 +21,7 @@ const instagramPostsData = [
   {
     id: "DbW1jlYJTMf",
     tag: "Instalasi Lahan",
-    postNum: "REEL #03",
+    postNum: "REEL #02",
     title: "Pemasangan Titik Light Trap di Hamparan Sawah",
     desc: "Perjalanan tim mahasiswa memasang tiang mekanik dan perangkat perangkap hama di pematang sawah Desa Sajen.",
     url: "https://www.instagram.com/reel/DbW1jlYJTMf/?utm_source=ig_web_copy_link&vrfl=MzRlODBiNWFlZA==&srtk=MzRlODBiNWFlZA==",
@@ -47,7 +34,7 @@ const instagramPostsData = [
   {
     id: "Dc4-sa-RJeE",
     tag: "Uji Telemetri LoRa",
-    postNum: "REEL #04",
+    postNum: "REEL #03",
     title: "Pengujian Jaringan LoRa & Sensor Tanah",
     desc: "Uji transmisi paket data telemetri nirkabel dari sensor NPK ke stasiun gateway sentral di Balai Desa.",
     url: "https://www.instagram.com/reel/Dc4-sa-RJeE/?utm_source=ig_web_copy_link&obrf=MzRlODBiNWFlZA==&srtk=MzRlODBiNWFlZA==",

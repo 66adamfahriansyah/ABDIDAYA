@@ -6,6 +6,7 @@
 
 let sajenMap = null;
 let currentTileLayer = null;
+let landBoundaryLayer = null;
 const mapMarkers = {};
 
 // Tile layer satelit resolusi tinggi Google Hybrid & Esri
@@ -26,6 +27,7 @@ function initSajenDeploymentMap() {
   if (sajenMap) {
     sajenMap.remove();
     sajenMap = null;
+    landBoundaryLayer = null;
   }
 
   // Buat instance peta Leaflet terpusat di demplot lahan
@@ -47,6 +49,68 @@ function initSajenDeploymentMap() {
     maxZoom: 21,
     attribution: '&copy; Google Maps &copy; OpenStreetMap'
   }).addTo(sajenMap);
+
+  // 1. BATAS AREA LAHAN TERPROTEKSI (Demplot 2,0 Ha - Garis Putus-putus Emerald Sesuai Legenda)
+  if (data.landBoundary && Array.isArray(data.landBoundary.coordinates)) {
+    landBoundaryLayer = L.polygon(data.landBoundary.coordinates, {
+      color: '#10b981',
+      weight: 2.5,
+      opacity: 0.95,
+      dashArray: '6, 8',
+      fillColor: '#10b981',
+      fillOpacity: 0.16,
+      className: 'leaflet-land-boundary'
+    }).addTo(sajenMap);
+
+    landBoundaryLayer.bindTooltip(`
+      <div class="px-2 py-1 font-sans text-xs">
+        <span class="font-extrabold text-emerald-800 flex items-center gap-1.5">
+          <span class="w-2 h-2 rounded-full bg-emerald-500 inline-block"></span>
+          Batas Area Lahan Terproteksi (2,0 Ha)
+        </span>
+        <span class="text-[10px] text-slate-500 font-medium block mt-0.5">Gapoktan Sumber Makmur • Desa Sajen</span>
+      </div>
+    `, {
+      sticky: true,
+      direction: 'top',
+      className: 'custom-land-tooltip'
+    });
+
+    landBoundaryLayer.bindPopup(`
+      <div class="p-3.5 max-w-xs font-sans text-slate-800">
+        <div class="flex items-center gap-2 mb-2">
+          <span class="px-2.5 py-0.5 rounded-full bg-emerald-100 text-emerald-800 text-[10px] font-bold font-mono uppercase tracking-wide">
+            Batas Demplot Lahan
+          </span>
+          <span class="text-[11px] font-bold text-emerald-700 font-mono">2,0 Ha</span>
+        </div>
+        <h4 class="text-xs sm:text-sm font-extrabold text-slate-900 mb-1 leading-snug">
+          Hamparan Pertanian Bawang Merah
+        </h4>
+        <p class="text-[11px] text-slate-600 mb-2.5 leading-relaxed">
+          Wilayah demplot binaan seluas 2,0 Ha yang diproteksi secara real-time oleh 5 Node Light Trap mandiri bertenaga surya dan jaringan transceiver LoRa.
+        </p>
+        <div class="space-y-1.5 pt-2.5 border-t border-slate-100 text-[11px] text-slate-600">
+          <div class="flex justify-between">
+            <span class="text-slate-500">Kelompok Tani:</span>
+            <span class="font-bold text-slate-800">Sumber Makmur</span>
+          </div>
+          <div class="flex justify-between">
+            <span class="text-slate-500">Komoditas Utama:</span>
+            <span class="font-bold text-emerald-700">Bawang Merah</span>
+          </div>
+          <div class="flex justify-between">
+            <span class="text-slate-500">Unit Terpasang:</span>
+            <span class="font-bold text-slate-800">5 Light Trap + 1 Gateway</span>
+          </div>
+          <div class="flex justify-between">
+            <span class="text-slate-500">Kondisi Tanah:</span>
+            <span class="font-bold text-emerald-700">Subur (N:45, P:30, K:25)</span>
+          </div>
+        </div>
+      </div>
+    `);
+  }
 
   // 1. GARIS LURUS TELEMETRI NODE 1 - NODE 5 (Jalur Pematang Sawah Lurus - Warna Orange)
   const straightLineCoords = [
@@ -194,6 +258,29 @@ function focusMapLocation(lat, lng, zoom, unitId) {
   }
 }
 
+// Fokus Peta ke Batas Area Lahan Demplot Terproteksi
+function focusLandBoundary() {
+  if (!sajenMap) return;
+
+  sajenMap.invalidateSize();
+  clearUnitCardHighlights();
+
+  if (landBoundaryLayer) {
+    sajenMap.fitBounds(landBoundaryLayer.getBounds(), {
+      padding: [40, 40],
+      maxZoom: 19,
+      duration: 1.0
+    });
+    setTimeout(() => {
+      landBoundaryLayer.openPopup();
+    }, 700);
+  } else if (EBIO_DATA.mapDeployment) {
+    sajenMap.flyTo(EBIO_DATA.mapDeployment.center, EBIO_DATA.mapDeployment.defaultZoom, {
+      duration: 1.0
+    });
+  }
+}
+
 // Reset Tampilan Peta ke Seluruh Titik Demplot Sajen
 function resetMapSajenView() {
   if (!sajenMap || !EBIO_DATA.mapDeployment) return;
@@ -264,6 +351,7 @@ function clearUnitCardHighlights() {
 if (typeof window !== 'undefined') {
   window.initSajenDeploymentMap = initSajenDeploymentMap;
   window.focusMapLocation = focusMapLocation;
+  window.focusLandBoundary = focusLandBoundary;
   window.resetMapSajenView = resetMapSajenView;
   window.toggleMapTileLayer = toggleMapTileLayer;
 }

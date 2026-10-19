@@ -1,0 +1,58 @@
+/**
+ * E-BIO PENS — Footer Component Styles
+ * Latar dark navy, aksen hijau toska, chip mitra, tombol media sosial, dan tata letak responsif
+ */
+
+#footer {
+  background-color: #070e1b !important;
+}
+
+/* Chip Mitra Strategis Program */
+.footer-partner-chip {
+  background-color: #0b1a2d;
+  border: 1px solid rgba(51, 65, 85, 0.7);
+  color: #cbd5e1;
+  transition: all 0.2s ease-in-out;
+}
+
+.footer-partner-chip:hover {
+  border-color: rgba(16, 185, 129, 0.5);
+  color: #ffffff;
+  background-color: #0f243e;
+}
+
+/* Tombol Media Sosial */
+.footer-social-btn-youtube {
+  background-color: rgba(69, 10, 10, 0.4);
+  border: 1px solid rgba(239, 68, 68, 0.3);
+  color: #fecaca;
+  transition: all 0.2s ease-in-out;
+}
+
+.footer-social-btn-youtube:hover {
+  background-color: rgba(127, 29, 29, 0.6);
+  border-color: rgba(239, 68, 68, 0.6);
+  color: #ffffff;
+  transform: translateY(-1px);
+}
+
+.footer-social-btn-instagram {
+  background-color: rgba(74, 4, 78, 0.4);
+  border: 1px solid rgba(236, 72, 153, 0.3);
+  color: #fbcfe8;
+  transition: all 0.2s ease-in-out;
+}
+
+.footer-social-btn-instagram:hover {
+  background-color: rgba(112, 26, 117, 0.6);
+  border-color: rgba(236, 72, 153, 0.6);
+  color: #ffffff;
+  transform: translateY(-1px);
+}
+
+/* Logo Footer */
+.footer-logo-img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}

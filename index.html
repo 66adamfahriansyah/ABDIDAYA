@@ -27,7 +27,7 @@
     integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo=" crossorigin=""></script>
 
   <!-- Custom CSS (Animasi, Pola Grid, & Scrollbar) -->
-  <link rel="stylesheet" href="css/styles.css?v=2.2">
+  <link rel="stylesheet" href="css/styles.css?v=2.3">
 
   <!-- Dark Mode Direct Embedded Styles (Guaranteed Zero Cache Issues) -->
   <style id="theme-dark-override">
@@ -246,7 +246,7 @@
   <!-- ========================================== -->
   <!-- 1. NAVIGATION BAR (MODERN, BERSIH & ELEGAN) -->
   <!-- ========================================== -->
-  <header
+  <header id="header"
     class="sticky top-0 z-50 backdrop-blur-xl bg-white/85 border-b border-slate-200/60 shadow-xs shadow-slate-900/5 transition-all duration-300">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
       <div class="flex items-center justify-between h-20">
@@ -912,20 +912,21 @@
       <!-- Section Header -->
       <div class="text-center max-w-3xl mx-auto mb-14 sm:mb-16 reveal">
         <div
-          class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-emerald-100/80 text-emerald-900 text-xs font-bold tracking-wider uppercase border border-emerald-200/90 mb-3.5 shadow-xs">
-          <svg class="w-3.5 h-3.5 text-emerald-700 shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-              d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z" />
+          class="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-emerald-50 text-emerald-700 text-xs font-semibold tracking-wider uppercase border border-emerald-200/80 mb-3.5 shadow-xs">
+          <svg class="w-3.5 h-3.5 text-emerald-600 shrink-0" fill="currentColor" viewBox="0 0 20 20">
+            <path fill-rule="evenodd"
+              d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z"
+              clip-rule="evenodd" />
           </svg>
           <span>KEBERLANJUTAN PROGRAM &amp; KELEMBAGAAN TANI</span>
         </div>
-        <h2 class="text-3xl sm:text-4xl lg:text-[40px] font-extrabold text-slate-900 tracking-tight leading-tight">
-          Terbentuknya Unit Pengendalian Hama Terpadu (PHT)
+        <h2 class="text-3xl sm:text-4xl lg:text-5xl font-extrabold text-slate-900 tracking-tight leading-tight">
+          Terbentuknya Unit Pengendalian Hama<br class="hidden sm:inline"> Terpadu (PHT)
         </h2>
-        <p class="mt-4 text-sm sm:text-base text-slate-600 leading-relaxed font-normal">
-          Inisiasi kelembagaan mandiri di tingkat kelompok tani (Gapoktan Sumber Makmur) bersama Pemerintah Desa Sajen
-          guna menjamin pengelolaan, pengoperasian, serta pemeliharaan berkala ekosistem Light Trap Tenaga Surya IoT di
-          persawahan.
+        <p class="mt-4 text-sm sm:text-base text-slate-600 leading-relaxed font-normal max-w-2xl mx-auto">
+          Pembentukan kelembagaan petani bersama Gapoktan Sumber Makmur, Pemerintah Desa Sajen, dan PENS untuk mendukung
+          pengelolaan hama, pemeliharaan perangkat, serta keberlanjutan pemanfaatan teknologi <span
+            class="italic font-normal">light trap</span> bertenaga surya berbasis IoT.
         </p>
       </div>
 
@@ -1005,7 +1006,7 @@
       <!-- ============================================== -->
       <div class="mt-20 pt-16 border-t border-slate-100">
 
-        <!-- Part 1: Feed Instagram Grid 4 Kotak Reels -->
+        <!-- Part 1: Feed Instagram Grid 3 Kotak Reels -->
         <div class="mb-20">
           <div class="flex flex-col md:flex-row md:items-end justify-between mb-10 gap-4 reveal">
             <div>
@@ -1033,8 +1034,8 @@
             </div>
           </div>
 
-          <!-- Grid 4 Kartu Reels Instagram Interaktif (Dimuat dinamis via js/render.js) -->
-          <div id="instagram-posts-container" class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6"></div>
+          <!-- Grid 3 Kartu Reels Instagram Interaktif (Dimuat dinamis via js/render.js) -->
+          <div id="instagram-posts-container" class="grid grid-cols-1 md:grid-cols-3 gap-6 lg:gap-8"></div>
         </div>
 
         <!-- Part 2: Thumbnail YouTube Grid 3 Kotak Memanjang -->
@@ -1077,101 +1078,94 @@
   </section>
 
   <!-- ========================================== -->
-  <!-- 11. FOOTER (KEMITRAAN, KONTAK, QR CODE & COPYRIGHT) -->
+  <!-- 11. FOOTER (KEMITRAAN, KONTAK, PENYELENGGARA & COPYRIGHT) -->
   <!-- ========================================== -->
-  <footer id="footer" class="bg-slate-900 text-white pt-20 pb-12 border-t border-slate-800">
+  <footer id="footer" class="bg-[#070e1b] text-white pt-16 sm:pt-20 pb-10 border-t border-slate-800/80">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
 
-      <!-- Top Grid: Kemitraan, Kontak, dan Kotak QR Code -->
-      <div class="grid grid-cols-1 md:grid-cols-12 gap-12 pb-16 border-b border-slate-800 reveal">
+      <!-- 1. Konten Utama Dua Kolom (Kemitraan, Kontak, dan Media Sosial) -->
+      <div class="grid grid-cols-1 md:grid-cols-12 gap-10 lg:gap-12 pb-12 reveal">
 
-        <!-- Kolom Kemitraan & Profil (7 Cols) -->
+        <!-- Kolom Kiri: Logo, Identitas, Deskripsi, Mitra Strategis (7 Cols) -->
         <div class="md:col-span-7 space-y-5">
-          <div class="flex items-center gap-3">
-            <div class="w-10 h-10 rounded-xl bg-emerald-500 flex items-center justify-center text-white shadow-md">
-              <svg class="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                  d="M12 3v1m0 16v1m9-9h-1M4 12H3m15.364 6.364l-.707-.707M6.343 6.343l-.707-.707m12.728 0l-.707.707M6.343 17.657l-.707.707M16 12a4 4 0 11-8 0 4 4 0 018 0z" />
-              </svg>
+          <div class="flex items-center gap-3.5">
+            <div class="w-12 h-12 sm:w-13 sm:h-13 rounded-full flex items-center justify-center shrink-0">
+              <img src="assets/logo.png" alt="Logo PPK Ormawa E-BIO PENS"
+                class="w-full h-full object-contain rounded-full" style="object-fit: contain;">
             </div>
             <div>
-              <span class="font-extrabold text-base tracking-tight text-white">PPK ORMAWA E-BIO</span>
-              <p class="text-xs text-emerald-400 font-medium">Politeknik Elektronika Negeri Surabaya</p>
+              <span class="font-extrabold text-base sm:text-lg tracking-tight text-white block">PPK ORMAWA E-BIO</span>
+              <p class="text-xs text-emerald-400 font-semibold tracking-wide">Politeknik Elektronika Negeri Surabaya</p>
             </div>
           </div>
 
-          <p class="text-xs sm:text-sm text-slate-400 leading-relaxed max-w-lg">
-            Program Penguatan Kapasitas Organisasi Kemahasiswaan (PPK Ormawa) E-BIO PENS 2026 merupakan program
-            pemberdayaan masyarakat bertema Smart Farming yang mengintegrasikan teknologi Internet of Things (IoT),
-            sistem light trap bertenaga surya, dan pemantauan kondisi lahan untuk mendukung pertanian bawang merah yang
-            lebih modern dan berkelanjutan di Desa Sajen, Kabupaten Mojokerto. Program ini dilaksanakan melalui
-            kolaborasi antara mahasiswa, perguruan tinggi, pemerintah desa, kelompok tani, dan Balai Penyuluhan
-            Pertanian (BPP).
+          <p class="text-xs sm:text-sm text-slate-300 leading-relaxed max-w-xl">
+            PPK Ormawa E-BIO PENS 2026 merupakan program pemberdayaan masyarakat berbasis Smart Farming yang
+            memanfaatkan IoT, light trap bertenaga surya, dan pemantauan kondisi lahan untuk mendukung pertanian bawang
+            merah berkelanjutan di Desa Sajen, Mojokerto, melalui kolaborasi mahasiswa, pemerintah desa, kelompok tani,
+            dan BPP.
           </p>
 
-          <!-- Badges Mitra Kolaborasi -->
+          <!-- Badges Mitra Strategis Program -->
           <div class="pt-2">
-            <div class="text-[11px] font-bold text-slate-400 uppercase tracking-wider mb-2.5">Mitra Strategis Program
+            <div class="text-[11px] font-bold text-slate-400 uppercase tracking-wider mb-2.5">MITRA STRATEGIS PROGRAM
             </div>
             <div class="flex flex-wrap items-center gap-2">
               <span
-                class="px-2.5 py-1 rounded-md text-[11px] font-medium bg-slate-800 text-slate-300 border border-slate-700">Belmawa
+                class="footer-partner-chip px-3 py-1.5 rounded-lg text-[11px] sm:text-xs font-medium shadow-xs">Belmawa
                 Kemendiktisaintek</span>
               <span
-                class="px-2.5 py-1 rounded-md text-[11px] font-medium bg-slate-800 text-slate-300 border border-slate-700">PENS</span>
+                class="footer-partner-chip px-3 py-1.5 rounded-lg text-[11px] sm:text-xs font-medium shadow-xs">PENS</span>
               <span
-                class="px-2.5 py-1 rounded-md text-[11px] font-medium bg-slate-800 text-slate-300 border border-slate-700">Pemerintah
+                class="footer-partner-chip px-3 py-1.5 rounded-lg text-[11px] sm:text-xs font-medium shadow-xs">Pemerintah
                 Desa Sajen</span>
               <span
-                class="px-2.5 py-1 rounded-md text-[11px] font-medium bg-slate-800 text-slate-300 border border-slate-700">Gapoktan
+                class="footer-partner-chip px-3 py-1.5 rounded-lg text-[11px] sm:text-xs font-medium shadow-xs">Gapoktan
                 Sumber Makmur</span>
-              <span
-                class="px-2.5 py-1 rounded-md text-[11px] font-medium bg-slate-800 text-slate-300 border border-slate-700">BPP
+              <span class="footer-partner-chip px-3 py-1.5 rounded-lg text-[11px] sm:text-xs font-medium shadow-xs">BPP
                 Kecamatan Pacet</span>
             </div>
           </div>
         </div>
 
-        <!-- Kolom Kontak & Sekretariat (5 Cols) -->
+        <!-- Kolom Kanan: Sekretariat, Kontak, dan Tombol Media Sosial (5 Cols) -->
         <div class="md:col-span-5 space-y-4">
-          <h4 class="text-xs font-bold text-slate-300 uppercase tracking-widest font-mono">Sekretariat & Informasi
-            Kontak</h4>
+          <h4 class="text-xs font-bold text-slate-300 uppercase tracking-widest font-mono">SEKRETARIAT &amp; INFORMASI
+            KONTAK</h4>
 
-          <div class="space-y-3 text-xs text-slate-400">
+          <div class="space-y-3 text-xs sm:text-[13px] text-slate-400 leading-relaxed">
             <div>
-              <span class="block text-slate-300 font-semibold mb-0.5">Kampus Utama:</span>
-              Gedung D4 Teknik Elektronika PENS, Jl. Raya ITS Sukolilo, Surabaya 60111
+              <span class="block text-slate-200 font-semibold mb-0.5">Kampus Utama:</span>
+              <p class="text-slate-400">Gedung D4 Teknik Elektronika PENS, Jl. Raya ITS, Sukolilo, Surabaya 60111.</p>
             </div>
 
             <div>
-              <span class="block text-slate-300 font-semibold mb-0.5">Sekretariat Lapangan:</span>
-              Balai Desa Sajen, Kec. Pacet, Kab. Mojokerto, Jawa Timur 61374.
+              <span class="block text-slate-200 font-semibold mb-0.5">Sekretariat Lapangan:</span>
+              <p class="text-slate-400">Balai Desa Sajen, Kecamatan Pacet, Kabupaten Mojokerto, Jawa Timur 61374.</p>
             </div>
 
-            <div class="pt-2 space-y-1.5">
-              <div class="flex items-center gap-2">
-                <svg class="w-4 h-4 text-emerald-400 shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                    d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
-                </svg>
-                <a href="mailto:ebiopens.ppkormawa@pens.ac.id"
-                  class="text-slate-300 hover:text-emerald-400 transition-colors font-mono">ebiopens.ppkormawa@pens.ac.id</a>
-              </div>
+            <div class="pt-1 flex items-center gap-2.5">
+              <svg class="w-4 h-4 text-emerald-400 shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                  d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
+              </svg>
+              <a href="mailto:ppkoebiopens@gmail.com"
+                class="text-slate-300 hover:text-emerald-400 transition-colors font-mono">ppkoebiopens@gmail.com</a>
             </div>
 
-            <!-- Social Media Buttons -->
-            <div class="pt-2 flex flex-wrap items-center gap-2.5">
+            <!-- Tombol Media Sosial -->
+            <div class="pt-2 flex flex-wrap items-center gap-3">
               <a href="https://www.youtube.com/@PPKOE-BIOPENS" target="_blank" rel="noopener noreferrer"
-                class="inline-flex items-center gap-2 px-3 py-1.5 rounded-xl bg-red-600/20 hover:bg-red-600 text-red-300 hover:text-white transition-all text-xs font-semibold border border-red-500/30">
-                <svg class="w-3.5 h-3.5 fill-current" viewBox="0 0 24 24">
+                class="footer-social-btn-youtube inline-flex items-center gap-2 px-4 py-2 rounded-full text-xs font-semibold shadow-xs">
+                <svg class="w-3.5 h-3.5 fill-current text-red-400" viewBox="0 0 24 24">
                   <path
                     d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z" />
                 </svg>
                 <span>PPKO E-BIO PENS</span>
               </a>
               <a href="https://www.instagram.com/ppko.ebiopens/" target="_blank" rel="noopener noreferrer"
-                class="inline-flex items-center gap-2 px-3 py-1.5 rounded-xl bg-pink-600/20 hover:bg-pink-600 text-pink-300 hover:text-white transition-all text-xs font-semibold border border-pink-500/30">
-                <svg class="w-3.5 h-3.5 fill-current" viewBox="0 0 24 24">
+                class="footer-social-btn-instagram inline-flex items-center gap-2 px-4 py-2 rounded-full text-xs font-semibold shadow-xs">
+                <svg class="w-3.5 h-3.5 fill-current text-pink-400" viewBox="0 0 24 24">
                   <path
                     d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z" />
                 </svg>
@@ -1183,16 +1177,36 @@
 
       </div>
 
-      <!-- Bottom Sub-Footer Bar -->
-      <div class="pt-8 flex flex-col sm:flex-row items-center justify-between gap-4 text-xs text-slate-400">
-        <div>
-          © 2026 PPK Ormawa E-BIO PENS. All Rights Reserved.
+      <!-- Garis Pembatas Horizontal Tipis -->
+      <div class="border-t border-slate-800"></div>
+
+      <!-- 2. Bagian Informasi Penyelenggara -->
+      <div class="py-8 reveal">
+        <h5 class="text-xs sm:text-sm font-bold text-emerald-400 mb-2">Diselenggarakan oleh:</h5>
+        <div class="text-xs text-slate-400 space-y-1 leading-relaxed">
+          <p>Direktorat Pembelajaran dan Kemahasiswaan (Belmawa)</p>
+          <p>Direktorat Jenderal Pendidikan Tinggi</p>
+          <p>Kementerian Pendidikan Tinggi, Sains, dan Teknologi Republik Indonesia</p>
         </div>
-        <div class="flex items-center gap-6">
+      </div>
+
+      <!-- Garis Pembatas Horizontal Tipis -->
+      <div class="border-t border-slate-800"></div>
+
+      <!-- 3. Copyright dan Navigasi Paling Bawah -->
+      <div class="pt-6 pb-2 flex flex-col md:flex-row items-center justify-between gap-4 text-xs text-slate-400">
+        <div class="text-center md:text-left">
+          © 2026 PPK Ormawa E-BIO. All Rights Reserved.
+        </div>
+        <div class="flex flex-wrap items-center justify-center md:justify-end gap-x-3 sm:gap-x-4 gap-y-2">
           <a href="#beranda" class="hover:text-emerald-400 transition-colors">Beranda</a>
+          <span class="text-slate-600 select-none">|</span>
           <a href="#spesifikasi-sistem" class="hover:text-emerald-400 transition-colors">Spesifikasi IoT</a>
+          <span class="text-slate-600 select-none">|</span>
           <a href="#legalitas-hki" class="hover:text-emerald-400 transition-colors">Legalitas Paten</a>
+          <span class="text-slate-600 select-none">|</span>
           <a href="#unit-pht" class="hover:text-emerald-400 transition-colors">Unit PHT</a>
+          <span class="text-slate-600 select-none">|</span>
           <a href="#dashboard-monitoring" class="hover:text-emerald-400 transition-colors">Dashboard Monitoring</a>
         </div>
       </div>
@@ -1332,29 +1346,31 @@
   <!-- 1. Data Store Modules -->
   <script src="js/data/hero.data.js"></script>
   <script src="js/data/farming.data.js"></script>
-  <script src="js/data/map.data.js?v=9.0"></script>
+  <script src="js/data/map.data.js?v=10.0"></script>
   <script src="js/data/press.data.js?v=11.0"></script>
-  <script src="js/data/legal.data.js?v=11.0"></script>
-  <script src="js/data/social.data.js?v=12.0"></script>
+  <script src="js/data/legal.data.js?v=12.0"></script>
+  <script src="js/data/social.data.js?v=13.0"></script>
   <script src="js/data/team.data.js"></script>
   <script src="js/data/catalog.data.js?v=11.0"></script>
   <script src="js/data.js?v=12.0"></script>
 
   <!-- 2. UI Component Renderers -->
+  <script src="js/renderers/header.renderer.js"></script>
   <script src="js/renderers/hero.renderer.js"></script>
   <script src="js/renderers/farming.renderer.js"></script>
-  <script src="js/renderers/map.renderer.js?v=9.0"></script>
+  <script src="js/renderers/map.renderer.js?v=10.0"></script>
   <script src="js/renderers/press.renderer.js?v=11.0"></script>
-  <script src="js/renderers/legal.renderer.js"></script>
-  <script src="js/renderers/social.renderer.js?v=12.0"></script>
+  <script src="js/renderers/legal.renderer.js?v=12.0"></script>
+  <script src="js/renderers/social.renderer.js?v=13.0"></script>
   <script src="js/renderers/team.renderer.js"></script>
   <script src="js/renderers/catalog.renderer.js"></script>
-  <script src="js/render.js?v=11.0"></script>
+  <script src="js/renderers/footer.renderer.js"></script>
+  <script src="js/render.js?v=12.0"></script>
 
   <!-- 3. Interactive Feature Modules -->
   <script src="js/modules/theme.js?v=2.2"></script>
   <script src="js/modules/navigation.js"></script>
-  <script src="js/modules/map.js?v=9.0"></script>
+  <script src="js/modules/map.js?v=10.0"></script>
   <script src="js/modules/modals.js?v=8.0"></script>
   <script src="js/modules/animations.js"></script>
 

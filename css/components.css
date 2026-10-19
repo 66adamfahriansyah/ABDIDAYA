@@ -92,3 +92,45 @@
   display: block !important;
   background-color: #f1f5f9;
 }
+
+/* Batas Area Lahan Demplot Styles & Pulse */
+.leaflet-land-boundary {
+  stroke-dasharray: 6, 8;
+  animation: pulseLandBoundary 3.5s ease-in-out infinite alternate;
+  cursor: pointer;
+  transition: stroke-width 0.2s ease, fill-opacity 0.2s ease;
+}
+
+.leaflet-land-boundary:hover {
+  stroke-width: 3.5px !important;
+  fill-opacity: 0.25 !important;
+}
+
+@keyframes pulseLandBoundary {
+  0% {
+    fill-opacity: 0.12;
+  }
+  100% {
+    fill-opacity: 0.20;
+  }
+}
+
+.custom-land-tooltip {
+  border-radius: 0.75rem !important;
+  border: 1px solid rgba(16, 185, 129, 0.4) !important;
+  box-shadow: 0 10px 15px -3px rgba(16, 185, 129, 0.15) !important;
+  padding: 4px 8px !important;
+  background: rgba(255, 255, 255, 0.95) !important;
+  backdrop-filter: blur(4px);
+}
+
+html.dark .custom-land-tooltip {
+  background: rgba(15, 23, 42, 0.95) !important;
+  border-color: rgba(16, 185, 129, 0.5) !important;
+}
+
+html.dark .custom-land-tooltip span.text-emerald-800 {
+  color: #34d399 !important;
+}
+
+

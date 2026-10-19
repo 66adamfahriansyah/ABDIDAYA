@@ -119,40 +119,45 @@ function initCounters() {
   }
 }
 
-// 4. Hero Showcase 3D Interactive Perspective Tilt
+// 4. Hero & PHT Showcase 3D Interactive Perspective Tilt
 function initHeroTilt() {
-  const tiltCard = document.getElementById('hero-tilt-card');
-  if (!tiltCard) return;
+  const tiltCards = document.querySelectorAll('#hero-tilt-card, #pht-tilt-card');
+  if (!tiltCards.length) return;
 
   // Nonaktifkan pada layar sentuh untuk menjaga performa
   if (window.matchMedia('(pointer: coarse)').matches) return;
 
-  let bounds = null;
+  tiltCards.forEach(tiltCard => {
+    if (tiltCard.dataset.tiltInitialized === 'true') return;
+    tiltCard.dataset.tiltInitialized = 'true';
 
-  function onMouseEnter() {
-    bounds = tiltCard.getBoundingClientRect();
-  }
+    let bounds = null;
 
-  function onMouseMove(e) {
-    if (!bounds) bounds = tiltCard.getBoundingClientRect();
-    const mouseX = e.clientX - bounds.left;
-    const mouseY = e.clientY - bounds.top;
+    function onMouseEnter() {
+      bounds = tiltCard.getBoundingClientRect();
+    }
 
-    const xPct = mouseX / bounds.width - 0.5;
-    const yPct = mouseY / bounds.height - 0.5;
+    function onMouseMove(e) {
+      if (!bounds) bounds = tiltCard.getBoundingClientRect();
+      const mouseX = e.clientX - bounds.left;
+      const mouseY = e.clientY - bounds.top;
 
-    const rotX = -yPct * 12; // derajat kemiringan sumbu X
-    const rotY = xPct * 12;  // derajat kemiringan sumbu Y
+      const xPct = mouseX / bounds.width - 0.5;
+      const yPct = mouseY / bounds.height - 0.5;
 
-    tiltCard.style.transform = `perspective(1000px) rotateX(${rotX.toFixed(2)}deg) rotateY(${rotY.toFixed(2)}deg) translateY(-4px)`;
-  }
+      const rotX = -yPct * 12; // derajat kemiringan sumbu X
+      const rotY = xPct * 12;  // derajat kemiringan sumbu Y
 
-  function onMouseLeave() {
-    tiltCard.style.transform = '';
-    bounds = null;
-  }
+      tiltCard.style.transform = `perspective(1000px) rotateX(${rotX.toFixed(2)}deg) rotateY(${rotY.toFixed(2)}deg) translateY(-4px)`;
+    }
 
-  tiltCard.addEventListener('mouseenter', onMouseEnter);
-  tiltCard.addEventListener('mousemove', onMouseMove);
-  tiltCard.addEventListener('mouseleave', onMouseLeave);
+    function onMouseLeave() {
+      tiltCard.style.transform = '';
+      bounds = null;
+    }
+
+    tiltCard.addEventListener('mouseenter', onMouseEnter);
+    tiltCard.addEventListener('mousemove', onMouseMove);
+    tiltCard.addEventListener('mouseleave', onMouseLeave);
+  });
 }

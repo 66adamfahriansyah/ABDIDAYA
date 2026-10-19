@@ -1,0 +1,8 @@
+/**
+ * E-BIO PENS — Header Component Styles
+ * Navigasi modern, glassmorphism header, responsive mobile menu
+ */
+
+header#header {
+  transition: all 0.3s ease-in-out;
+}

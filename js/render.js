@@ -23,9 +23,12 @@ const EBIORenderer = {
   renderTeamDivisions: () => typeof renderTeamDivisions === 'function' && renderTeamDivisions(),
   renderCatalogDocuments: () => typeof renderCatalogDocuments === 'function' && renderCatalogDocuments(),
   renderDeploymentMapSection: () => typeof renderDeploymentMapSection === 'function' && renderDeploymentMapSection(),
+  renderHeader: () => typeof renderHeader === 'function' && renderHeader(),
+  renderFooter: () => typeof renderFooter === 'function' && renderFooter(),
 
   // Eksekusi Semua Rendering Antarmuka
   initAll: function () {
+    this.renderHeader();
     this.renderHeroStats();
     this.renderSmartFarmingComponents();
     this.renderSystemWorkflow();
@@ -38,6 +41,7 @@ const EBIORenderer = {
     this.renderYoutubeVideos();
     this.renderTeamDivisions();
     this.renderCatalogDocuments();
+    this.renderFooter();
   }
 };
 
