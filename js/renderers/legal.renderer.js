@@ -3,81 +3,59 @@
  * Menggenerasi 3 kartu HKI dengan space gambar sertifikat, serta seksi terbentuknya Unit PHT
  */
 
-// 1. Render 3 Kartu HKI (Desain, Alat, Web)
+// 1. Render 3 Kartu HKI (Alat, Desain, Web — Model Layout Foto Surat Pernyataan Unit PHT)
 function renderLegalItems() {
   const container = document.getElementById('legal-items-container');
   if (!container || !EBIO_DATA.legalItems) return;
 
-  container.innerHTML = EBIO_DATA.legalItems.map(item => `
-    <div class="bg-white rounded-3xl border border-slate-200/80 shadow-soft hover:shadow-card-hover hover:-translate-y-1.5 transition-all duration-300 flex flex-col justify-between overflow-hidden group">
-      <div>
-        <!-- Space Gambar HKI (Dedicated Image Container) -->
-        <div class="relative aspect-[16/11] sm:aspect-[4/3] w-full bg-slate-50 overflow-hidden border-b border-slate-100 cursor-pointer"
-          onclick="openImagePreview('${item.image}', '${item.title}')" title="Klik untuk memperbesar sertifikat">
-          <img src="${item.image}" alt="${item.imgAlt || item.title}"
-            class="w-full h-full object-cover object-center group-hover:scale-105 transition-transform duration-500"
-            onerror="this.onerror=null; this.src='assets/lighttrap.jpg';">
-          
-          <!-- Floating Category Badge -->
-          <div class="absolute top-3 left-3 z-10">
-            <span class="inline-flex items-center gap-1 px-2.5 py-1 rounded-full text-[10px] font-bold tracking-wide uppercase shadow-sm backdrop-blur-md ${item.badgeClass} bg-white/95">
-              ${item.badge}
+  container.innerHTML = EBIO_DATA.legalItems.map((item, idx) => `
+    <div class="w-full bg-white/95 dark:bg-slate-900/90 backdrop-blur-md rounded-3xl p-5 sm:p-6 border-2 border-emerald-500/20 shadow-xl shadow-slate-900/5 relative group transition-all duration-300 hover:shadow-2xl hover:border-emerald-500/40 hover:-translate-y-1.5 flex flex-col">
+      
+      <!-- Pulse Ring Accent (Sesuai styling showcase di Unit PHT) -->
+      <div class="absolute -inset-1 rounded-3xl bg-gradient-to-r from-emerald-500/15 via-teal-500/10 to-emerald-500/15 blur-md -z-10 opacity-70 group-hover:opacity-100 transition-opacity"></div>
+
+      <!-- Top Section: Header & Certificate Image (Flex-None agar tinggi frame 100% seragam di ketiga kartu) -->
+      <div class="flex-none">
+        <!-- Header Dokumen di Dalam Card (Persis Model Surat Pernyataan Unit PHT) -->
+        <div class="flex items-center justify-between gap-2 h-7 pb-3.5 border-b border-slate-100 dark:border-slate-800 box-content">
+          <div class="flex items-center gap-2.5 min-w-0">
+            <span class="w-2.5 h-2.5 rounded-full bg-emerald-500 shrink-0 animate-pulse"></span>
+            <span class="text-xs sm:text-sm font-bold text-slate-800 dark:text-slate-200 leading-snug truncate">
+              ${item.documentTitle || 'Surat Pencatatan Ciptaan'}
             </span>
           </div>
-
-          <!-- Zoom Indicator Button -->
-          <div class="absolute top-3 right-3 z-10 w-8 h-8 rounded-xl bg-white/95 backdrop-blur-md text-slate-700 flex items-center justify-center shadow-sm opacity-80 group-hover:opacity-100 group-hover:scale-105 transition-all">
-            <svg class="w-4 h-4 text-emerald-800" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0zM10 7v3m0 0v3m0-3h3m-3 0H7" />
-            </svg>
-          </div>
-
-          <!-- Bottom Gradient Overlay for Visual Polish -->
-          <div class="absolute inset-x-0 bottom-0 h-10 bg-gradient-to-t from-slate-900/40 to-transparent pointer-events-none"></div>
-          <div class="absolute bottom-2.5 left-3.5 z-10 text-[10px] font-mono text-white drop-shadow font-semibold">
-            ${item.category || item.badge}
-          </div>
+          <span class="inline-flex items-center px-2.5 py-0.5 rounded-full text-[11px] font-bold text-emerald-700 dark:text-emerald-400 bg-emerald-50 dark:bg-emerald-950/70 border border-emerald-200/80 dark:border-emerald-800/60 shadow-2xs shrink-0">
+            ${item.tag}
+          </span>
         </div>
 
-        <!-- Body Info -->
-        <div class="p-6">
-          <div class="flex items-center justify-between gap-2 mb-2.5">
-            <span class="text-xs font-mono font-bold text-emerald-700 bg-emerald-50 px-2.5 py-0.5 rounded-lg border border-emerald-100/80">
-              ${item.number}
-            </span>
-            <span class="w-2 h-2 rounded-full bg-emerald-500"></span>
-          </div>
-          
-          <h3 class="text-lg font-bold text-slate-900 group-hover:text-emerald-700 transition-colors leading-snug">
+        <!-- Frame Dokumen Sertifikat (Aspect ratio 496/701 presisi A4 agar tinggi gambar identik dan posisi judul di bawahnya 100% sejajar) -->
+        <div class="relative w-full aspect-[496/701] rounded-2xl overflow-hidden bg-white dark:bg-slate-950 border border-slate-200/80 dark:border-slate-800 shadow-xs card-shimmer mt-3.5 flex items-center justify-center">
+          <img src="${item.image}" alt="${item.imgAlt || item.title}"
+            onclick="openImagePreview('${item.image}', '${item.title}')"
+            class="w-full h-full object-contain block hover:scale-102 transition-transform duration-300 cursor-pointer"
+            title="Klik untuk memperbesar dokumen sertifikat"
+            onerror="this.onerror=null; this.src='assets/placeholder.png';">
+        </div>
+      </div>
+
+      <!-- Info Section (Icon + Title & Description) — Posisi Y & Judul 100% Sejajar di Semua Kartu -->
+      <div class="flex items-start gap-3.5 sm:gap-4 mt-5 sm:mt-6 pt-4 border-t border-slate-100 dark:border-slate-800/80 flex-1">
+        <!-- Icon Box -->
+        <div class="w-11 h-11 rounded-2xl bg-[#dcfce7] dark:bg-emerald-950/60 flex items-center justify-center text-[#059669] dark:text-emerald-400 shrink-0 mt-0.5 border border-emerald-100 dark:border-emerald-900/50 shadow-2xs">
+          ${item.iconSvg}
+        </div>
+        <!-- Title & Description -->
+        <div class="flex-1 min-w-0">
+          <h3 class="text-base sm:text-lg font-bold text-slate-900 dark:text-white leading-tight">
             ${item.title}
           </h3>
-          
-          <p class="mt-2.5 text-xs text-slate-500 leading-relaxed">
+          <p class="mt-1.5 text-xs sm:text-sm text-slate-600 dark:text-slate-300 leading-relaxed font-normal">
             ${item.desc}
           </p>
         </div>
       </div>
-      
-      <!-- Card Footer -->
-      <div class="px-6 pb-6 pt-3 border-t border-slate-100 flex items-center justify-between">
-        <span class="inline-flex items-center gap-1.5 text-[11px] font-bold text-emerald-700">
-          <svg class="w-3.5 h-3.5 text-emerald-600" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
-          </svg>
-          <span>${item.status}</span>
-        </span>
-        <div class="flex items-center gap-2">
-          <button onclick="openImagePreview('${item.image}', '${item.title}')" class="px-2.5 py-1 rounded-lg text-xs font-semibold text-slate-600 hover:text-emerald-700 hover:bg-slate-100 transition-colors">
-            Lihat
-          </button>
-          <button onclick="openDocumentModal()" class="inline-flex items-center gap-1 px-3 py-1.5 rounded-lg text-xs font-bold text-emerald-800 bg-emerald-50 hover:bg-emerald-100 transition-colors border border-emerald-200/60">
-            <span>Unduh PDF</span>
-            <svg class="w-3 h-3" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4" />
-            </svg>
-          </button>
-        </div>
-      </div>
+
     </div>
   `).join('');
 }

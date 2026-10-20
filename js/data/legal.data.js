@@ -3,49 +3,56 @@
  * Menyimpan data 3 sertifikasi HKI (Desain, Alat, Web) dan kelembagaan Unit PHT
  */
 
-// 1. Sertifikasi HKI & Paten (3 Item)
+// 1. Sertifikasi HKI & Paten (3 Item Sesuai Layout Mockup)
 const legalItemsData = [
   {
-    id: "desain",
-    badge: "DJKI KEMENKUMHAM",
-    badgeClass: "bg-amber-50 text-amber-700 border-amber-200",
-    iconBgClass: "bg-amber-50 text-amber-600",
-    title: "HKI Desain Industri",
-    category: "Desain Mekanik & Rangka",
-    number: "No. EC002024108821",
-    desc: "Perlindungan hak cipta desain industri rangka mekanis aerodinamis tahan cuaca ekstrem dan struktur corong pemisah serangga otomatis.",
-    status: "Status: Terdaftar Sah",
-    image: "assets/hki-desain.svg",
-    imgAlt: "Sertifikat HKI Desain Industri Light Trap Surya",
-    iconSvg: `<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z" />`
+    id: "alat",
+    tag: "HKI Alat",
+    documentTitle: "Surat Pencatatan Ciptaan",
+    title: "HKI Alat",
+    desc: "Rancang Bangun Sistem Kendali Light Trap Tenaga Surya Berbasis Mikrokontroler IoT dan LoRa untuk Pengendalian Hama Bawang Merah di Desa Sajen, Mojokerto",
+    image: "assets/hkialat.png",
+    imgAlt: "Sertifikat HKI Alat - Rancang Bangun Sistem Kendali Light Trap Tenaga Surya Berbasis Mikrokontroler IoT dan LoRa",
+    iconSvg: `<svg class="w-6 h-6 text-[#059669]" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+      <path d="M17 3a4 4 0 0 1 4 4" />
+      <path d="M19 1a7 7 0 0 1 4 4" stroke-width="1.8" />
+      <polygon points="3 14 6 8 18 8 21 14 3 14" stroke-width="1.8" fill="currentColor" fill-opacity="0.15" />
+      <line x1="12" y1="8" x2="12" y2="14" />
+      <line x1="4.5" y1="11" x2="19.5" y2="11" />
+      <path d="M12 14v6" stroke-width="2" />
+      <path d="M8 20h8" stroke-width="2" />
+    </svg>`
   },
   {
-    id: "alat",
-    badge: "PATEN SEDERHANA",
-    badgeClass: "bg-emerald-50 text-emerald-700 border-emerald-200",
-    iconBgClass: "bg-emerald-50 text-emerald-600",
-    title: "Paten Alat & Metode",
-    category: "Invensi Perangkat Keras",
-    number: "No. S00202409941",
-    desc: "Invensi sistem pemikat hama berspektrum ganda dengan pembangkit kejut tegangan teratur dan telemetri nirkabel hemat daya.",
-    status: "Status: Granted Paten",
-    image: "assets/hki-alat.svg",
-    imgAlt: "Sertifikat Paten Sederhana Alat Light Trap LoRa",
-    iconSvg: `<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19.428 15.428a2 2 0 00-1.022-.547l-2.387-.477a6 6 0 00-3.86.517l-.318.158a6 6 0 01-3.86.517L6.05 15.21a2 2 0 00-1.806.547M8 4h8l-1 1v5.172a2 2 0 00.586 1.414l5 5c1.26 1.26.367 3.414-1.415 3.414H4.828c-1.782 0-2.674-2.154-1.414-3.414l5-5A2 2 0 009 10.172V5L8 4z" />`
+    id: "desain",
+    tag: "HKI Desain",
+    documentTitle: "Surat Pencatatan Ciptaan",
+    title: "HKI Desain",
+    desc: "Desain Sistem Light Trap Tenaga Surya Berbasis IoT dan LoRa untuk Pengendalian Hama Bawang Merah di Desa Sajen, Mojokerto",
+    image: "assets/hkidesain.png",
+    imgAlt: "Sertifikat HKI Desain - Desain Sistem Light Trap Tenaga Surya Berbasis IoT dan LoRa",
+    iconSvg: `<svg class="w-6 h-6 text-[#059669]" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+      <path d="M12 19l7-7 3 3-7 7-3-3z" />
+      <path d="M18 13l-1.5-7.5L2 2l3.5 14.5L13 18l5-5z" />
+      <path d="M2 2l7.586 7.586" />
+      <circle cx="11" cy="11" r="2" />
+    </svg>`
   },
   {
     id: "web",
-    badge: "HAK CIPTA SOFTWARE",
-    badgeClass: "bg-blue-50 text-blue-700 border-blue-200",
-    iconBgClass: "bg-blue-50 text-blue-600",
-    title: "HKI Web Dashboard",
-    category: "Program Komputer & IoT",
-    number: "No. EC00202411543",
-    desc: "Pencatatan hak cipta atas program komputer aplikasi antarmuka pemantauan telemetri IoT LoRa dan sistem basis data Gapoktan.",
-    status: "Status: Surat Pencatatan",
-    image: "assets/hki-web.svg",
-    imgAlt: "Sertifikat HKI Program Komputer Web Monitoring",
-    iconSvg: `<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 20l4-16m4 4l4 4-4 4M6 16l-4-4 4-4" />`
+    tag: "HKI Website",
+    documentTitle: "Surat Pencatatan Ciptaan",
+    title: "HKI Website",
+    desc: "Rancang Bangun Platform Website Monitoring dan Kontrol Light Trap Tenaga Surya Berbasis IoT dan LoRa untuk Pengendalian Hama Bawang Merah di Desa Sajen, Mojokerto",
+    image: "assets/hkiwebsite.png",
+    imgAlt: "Sertifikat HKI Website - Rancang Bangun Platform Website Monitoring dan Kontrol Light Trap Tenaga Surya Berbasis IoT dan LoRa",
+    iconSvg: `<svg class="w-6 h-6 text-[#059669]" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+      <rect x="2" y="3" width="20" height="14" rx="2" ry="2" />
+      <line x1="8" y1="21" x2="16" y2="21" />
+      <line x1="12" y1="17" x2="12" y2="21" />
+      <path d="M10 9l-2 2 2 2" />
+      <path d="M14 9l2 2-2 2" />
+    </svg>`
   }
 ];
 

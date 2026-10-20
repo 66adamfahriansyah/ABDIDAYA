@@ -19,30 +19,24 @@ function applyTheme(theme) {
 }
 
 function updateThemeButtonsUI(isDark) {
-  const lightBtn = document.getElementById('theme-btn-light');
-  const darkBtn = document.getElementById('theme-btn-dark');
-  const lightBtnMobile = document.getElementById('theme-btn-light-mobile');
-  const darkBtnMobile = document.getElementById('theme-btn-dark-mobile');
+  const lightBtns = document.querySelectorAll('.theme-btn-light, #theme-btn-light, #theme-btn-light-mobile');
+  const darkBtns = document.querySelectorAll('.theme-btn-dark, #theme-btn-dark, #theme-btn-dark-mobile');
 
-  if (lightBtn && darkBtn) {
+  lightBtns.forEach(btn => {
     if (isDark) {
-      lightBtn.className = "flex items-center gap-1.5 px-3 py-1 rounded-full text-xs font-bold transition-all duration-200 bg-transparent text-slate-400 hover:text-slate-200 cursor-pointer";
-      darkBtn.className = "flex items-center gap-1.5 px-3 py-1 rounded-full text-xs font-bold transition-all duration-200 bg-emerald-600 text-white shadow-sm cursor-pointer";
+      btn.className = "theme-btn-light flex items-center gap-1.5 px-2 sm:px-3 py-1 rounded-full text-[12px] font-semibold transition-all duration-200 bg-transparent text-[#64748B] hover:text-slate-200 cursor-pointer shrink-0";
     } else {
-      lightBtn.className = "flex items-center gap-1.5 px-3 py-1 rounded-full text-xs font-bold transition-all duration-200 bg-white text-slate-900 shadow-xs cursor-pointer";
-      darkBtn.className = "flex items-center gap-1.5 px-3 py-1 rounded-full text-xs font-bold transition-all duration-200 bg-transparent text-slate-500 hover:text-slate-800 cursor-pointer";
+      btn.className = "theme-btn-light flex items-center gap-1.5 px-2 sm:px-3 py-1 rounded-full text-[12px] font-semibold transition-all duration-200 bg-white text-[#334155] shadow-xs cursor-pointer shrink-0";
     }
-  }
+  });
 
-  if (lightBtnMobile && darkBtnMobile) {
+  darkBtns.forEach(btn => {
     if (isDark) {
-      lightBtnMobile.className = "p-1.5 rounded-full transition-all bg-transparent text-slate-400";
-      darkBtnMobile.className = "p-1.5 rounded-full transition-all bg-emerald-600 text-white shadow-xs";
+      btn.className = "theme-btn-dark flex items-center gap-1.5 px-2 sm:px-3 py-1 rounded-full text-[12px] font-semibold transition-all duration-200 bg-slate-900 text-white shadow-xs cursor-pointer shrink-0";
     } else {
-      lightBtnMobile.className = "p-1.5 rounded-full transition-all bg-white text-amber-500 shadow-xs";
-      darkBtnMobile.className = "p-1.5 rounded-full transition-all bg-transparent text-slate-500";
+      btn.className = "theme-btn-dark flex items-center gap-1.5 px-2 sm:px-3 py-1 rounded-full text-[12px] font-semibold transition-all duration-200 bg-transparent text-[#64748B] hover:text-[#334155] cursor-pointer shrink-0";
     }
-  }
+  });
 }
 
 function toggleTheme() {

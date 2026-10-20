@@ -12,8 +12,9 @@ function initApp() {
     EBIORenderer.initAll();
   }
 
-  // 2. Inisialisasi Navigasi Responsif & Active Scroll Spy
+  // 2. Inisialisasi Navigasi Responsif, Dropdown & Active Scroll Spy
   if (typeof initMobileNavigation === 'function') initMobileNavigation();
+  if (typeof initNavDropdown === 'function') initNavDropdown();
   if (typeof initScrollSpy === 'function') initScrollSpy();
 
   // 3. Inisialisasi Kontrol Modal & Lightbox Keyboard Listeners
