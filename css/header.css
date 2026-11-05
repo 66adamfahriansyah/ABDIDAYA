@@ -69,8 +69,15 @@ html.dark .nav-main-link.active {
   color: #6ee7b7 !important;
 }
 
-/* Responsivitas Mobile Tema Button (di bawah 640px) */
-@media (max-width: 640px) {
+/* Header Box Sizing & Overflow Prevention */
+#header {
+  width: 100% !important;
+  max-width: 100vw !important;
+  box-sizing: border-box !important;
+}
+
+/* Responsivitas Tema Button: Sembunyikan teks label Light/Dark di bawah 1536px (2xl) agar navbar tidak terpotong */
+@media (max-width: 1535px) {
   #theme-btn-light span,
   #theme-btn-dark span {
     display: none !important;
