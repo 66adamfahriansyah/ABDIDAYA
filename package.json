@@ -1,0 +1,19 @@
+{
+  "name": "abdidaya-ebio-pens",
+  "version": "1.0.0",
+  "description": "PPK Ormawa E-BIO PENS Landing Page",
+  "main": "index.html",
+  "scripts": {
+    "dev": "node server.js",
+    "start": "node server.js",
+    "serve": "node server.js"
+  },
+  "keywords": [
+    "ppk-ormawa",
+    "ebio-pens",
+    "abdidaya"
+  ],
+  "author": "PPK Ormawa E-BIO PENS",
+  "license": "ISC"
+}
+
