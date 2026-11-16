@@ -1,6 +1,6 @@
 /**
  * E-BIO PENS — Footer Component
- * Merender footer resmi PPK Ormawa E-BIO PENS Desa Sajen 2026
+ * Merender footer resmi PPK Ormawa E-BIO Desa Sajen 2026
  */
 
 export function renderFooterComponent(containerId = 'footer') {

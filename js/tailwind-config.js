@@ -1,6 +1,6 @@
 /**
  * E-BIO PENS — Tailwind CSS Design System Configuration
- * Proyek Inovasi PPK Ormawa E-BIO PENS Desa Sajen, Mojokerto
+ * Proyek Inovasi PPK Ormawa E-BIO Desa Sajen, Mojokerto
  */
 tailwind.config = {
   darkMode: 'class',

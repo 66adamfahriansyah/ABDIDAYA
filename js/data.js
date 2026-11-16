@@ -34,7 +34,7 @@ const EBIO_DATA = {
   },
   get youtubeChannel() {
     return typeof youtubeChannelData !== 'undefined' ? youtubeChannelData : {
-      name: "PPKO E-BIO PENS",
+      name: "PPKO E-BIO",
       handle: "@PPKOE-BIOPENS",
       channelId: "UCCd546i23bmMdQc01U7Cbag",
       url: "https://www.youtube.com/@PPKOE-BIOPENS"
@@ -42,6 +42,12 @@ const EBIO_DATA = {
   },
   get teamDivisions() {
     return typeof teamDivisionsData !== 'undefined' ? teamDivisionsData : [];
+  },
+  get abdidayaInfo() {
+    return typeof abdidayaInfoData !== 'undefined' ? abdidayaInfoData : null;
+  },
+  get abdidayaAwards() {
+    return typeof abdidayaAwardsData !== 'undefined' ? abdidayaAwardsData : [];
   },
   get catalogDocuments() {
     return typeof catalogDocumentsData !== 'undefined' ? catalogDocumentsData : [];

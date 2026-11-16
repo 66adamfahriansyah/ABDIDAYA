@@ -56,9 +56,9 @@ const youtubeVideosData = [
     alt: "INOVASI SMART FARMING UNTUK DESA SAJEN | PPK ORMAWA E-BIO 2026",
     badge: "Smart Farming",
     duration: "Dokumentasi",
-    channel: "PPKO E-BIO PENS",
+    channel: "PPKO E-BIO",
     channelUrl: "https://www.youtube.com/@PPKOE-BIOPENS",
-    meta: "PPKO E-BIO PENS • YouTube",
+    meta: "PPKO E-BIO • YouTube",
     title: "INOVASI SMART FARMING UNTUK DESA SAJEN | PPK ORMAWA E-BIO 2026",
     desc: "Dokumentasi penerapan teknologi Light Trap Surya IoT dan telemetri LoRa untuk pemberdayaan petani bawang merah Desa Sajen."
   },
@@ -70,9 +70,9 @@ const youtubeVideosData = [
     alt: "PROUDLY PRESENT: VIDEO PROFIL DESA SAJEN | PPK ORMAWA E-BIO 2026",
     badge: "Profil Desa",
     duration: "Profil Wilayah",
-    channel: "PPKO E-BIO PENS",
+    channel: "PPKO E-BIO",
     channelUrl: "https://www.youtube.com/@PPKOE-BIOPENS",
-    meta: "PPKO E-BIO PENS • YouTube",
+    meta: "PPKO E-BIO • YouTube",
     title: "PROUDLY PRESENT: VIDEO PROFIL DESA SAJEN | PPK ORMAWA E-BIO 2026",
     desc: "Eksplorasi potensi geografis, pertanian hortikultura, serta semangat gotong royong warga Desa Sajen, Pacet, Mojokerto."
   },
@@ -84,9 +84,9 @@ const youtubeVideosData = [
     alt: "BEHIND THE SCENES: PERSIAPAN MENUJU AKSI NYATA | PPK ORMAWA E-BIO 2026",
     badge: "Behind The Scenes",
     duration: "Aksi Nyata",
-    channel: "PPKO E-BIO PENS",
+    channel: "PPKO E-BIO",
     channelUrl: "https://www.youtube.com/@PPKOE-BIOPENS",
-    meta: "PPKO E-BIO PENS • YouTube",
+    meta: "PPKO E-BIO • YouTube",
     title: "BEHIND THE SCENES: PERSIAPAN MENUJU AKSI NYATA | PPK ORMAWA E-BIO 2026",
     desc: "Kilas balik proses persiapan tim, riset lapangan, perakitan perangkat keras, dan perjalanan pengabdian mahasiswa PENS."
   }
@@ -94,7 +94,7 @@ const youtubeVideosData = [
 
 // 3. Metadata Kanal YouTube Resmi
 const youtubeChannelData = {
-  name: "PPKO E-BIO PENS",
+  name: "PPKO E-BIO",
   handle: "@PPKOE-BIOPENS",
   channelId: "UCCd546i23bmMdQc01U7Cbag",
   url: "https://www.youtube.com/@PPKOE-BIOPENS",

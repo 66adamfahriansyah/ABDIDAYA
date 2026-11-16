@@ -28,7 +28,7 @@ const pressArticlesData = [
     image: "assets/RRI.png",
     alt: "Siaran Berita Radio RRI Radio Republik Indonesia",
     category: "Wawancara & Liputan Media",
-    title: "Pemberdayaan Tani Mojokerto Lewat Smart Agriculture: PPK Ormawa E-BIO PENS Raih Apresiasi",
+    title: "Pemberdayaan Tani Mojokerto Lewat Smart Agriculture: PPK Ormawa E-BIO Raih Apresiasi",
     desc: "Diskusi interaktif seputar kontribusi nyata mahasiswa perguruan tinggi vokasi dalam mengatasi masalah kelangkaan pasokan listrik sawah melalui telemetri LoRa.",
     footerSource: "Siaran RRI Pro 1",
     actionText: "Tonton Siaran RRI",
@@ -44,7 +44,7 @@ const pressArticlesData = [
     alt: "Publikasi Resmi Kemendiktisaintek",
     category: "Warta Resmi Kementerian",
     title: "Inovasi Mahasiswa PENS Bawa Perubahan Bagi Petani Bawang Merah di Mojokerto",
-    desc: "Publikasi resmi Direktorat Jenderal Pendidikan Tinggi, Riset, dan Teknologi mengulas transformasi Desa Sajen melalui implementasi Light Trap Tenaga Surya IoT tim PPK Ormawa E-BIO PENS.",
+    desc: "Publikasi resmi Direktorat Jenderal Pendidikan Tinggi, Riset, dan Teknologi mengulas transformasi Desa Sajen melalui implementasi Light Trap Tenaga Surya IoT tim PPK Ormawa E-BIO.",
     footerSource: "Portal Dikti Resmi",
     actionText: "Baca Berita Dikti",
     link: "https://dikti.kemdiktisaintek.go.id/publikasi/berita/inovasi-mahasiswa-pens-bawa-perubahan-bagi-petani-bawang-merah-di-mojokerto"

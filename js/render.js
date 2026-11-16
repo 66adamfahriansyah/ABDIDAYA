@@ -21,6 +21,7 @@ const EBIORenderer = {
   renderInstagramPosts: () => typeof renderInstagramPosts === 'function' && renderInstagramPosts(),
   renderYoutubeVideos: () => typeof renderYoutubeVideos === 'function' && renderYoutubeVideos(),
   renderTeamDivisions: () => typeof renderTeamDivisions === 'function' && renderTeamDivisions(),
+  renderAbdidayaAwards: () => typeof renderAbdidayaAwards === 'function' && renderAbdidayaAwards(),
   renderCatalogDocuments: () => typeof renderCatalogDocuments === 'function' && renderCatalogDocuments(),
   renderDeploymentMapSection: () => typeof renderDeploymentMapSection === 'function' && renderDeploymentMapSection(),
   renderHeader: () => typeof renderHeader === 'function' && renderHeader(),
@@ -40,6 +41,7 @@ const EBIORenderer = {
     this.renderInstagramPosts();
     this.renderYoutubeVideos();
     this.renderTeamDivisions();
+    this.renderAbdidayaAwards();
     this.renderCatalogDocuments();
     this.renderFooter();
   }

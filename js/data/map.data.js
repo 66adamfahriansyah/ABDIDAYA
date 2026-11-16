@@ -15,7 +15,7 @@ const mapDeploymentData = {
     areaHa: "2,0 Ha",
     farmerGroup: "Gapoktan Sumber Makmur",
     location: "Desa Sajen, Pacet, Mojokerto",
-    description: "Kawasan hamparan lahan pertanian bawang merah seluas 2,0 Ha yang terproteksi oleh sistem monitoring E-BIO PENS dengan 5 unit Light Trap dan Gateway LoRa.",
+    description: "Kawasan hamparan lahan pertanian bawang merah seluas 2,0 Ha yang terproteksi oleh sistem monitoring E-BIO dengan 5 unit Light Trap dan Gateway LoRa.",
     coordinates: [
       [-7.660880, 112.528520],
       [-7.660940, 112.529080],

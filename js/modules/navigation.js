@@ -131,7 +131,7 @@ function initScrollSpy() {
 
     // Cek apakah section yang aktif berada di dalam menu "Lainnya"
     const dropdownBtn = document.getElementById('nav-dropdown-btn');
-    const dropdownSectionIds = ['legalitas-hki', 'unit-pht', 'tim-inovasi'];
+    const dropdownSectionIds = ['legalitas-hki', 'unit-pht', 'tim-inovasi', 'anugerah-abdidaya', 'media-sosial'];
     if (dropdownBtn) {
       if (dropdownSectionIds.includes(currentSectionId)) {
         dropdownBtn.classList.add('bg-[#F0FDF4]', 'text-[#166534]', 'nav-active');

@@ -1,7 +1,7 @@
 @echo off
-title PPK Ormawa E-BIO PENS - Local Development Server
+title PPK Ormawa E-BIO - Local Development Server
 echo ======================================================================
-echo           PPK ORMAWA E-BIO PENS - DESA SAJEN
+echo           PPK ORMAWA E-BIO - DESA SAJEN
 echo         Server Lokal untuk Menjalankan Landing Page
 echo ======================================================================
 echo.

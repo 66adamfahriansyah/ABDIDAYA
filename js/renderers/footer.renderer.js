@@ -1,6 +1,6 @@
 /**
  * E-BIO PENS — Renderer: Footer Component
- * Merender footer resmi PPK Ormawa E-BIO PENS Desa Sajen 2026
+ * Merender footer resmi PPK Ormawa E-BIO Desa Sajen 2026
  * Tata letak dua kolom, identitas program, mitra strategis, sekretariat & kontak,
  * informasi penyelenggara Belmawa Kemendiktisaintek, dan copyright serta navigasi bawah.
  */
@@ -19,7 +19,7 @@ function renderFooter() {
         <div class="md:col-span-7 space-y-5">
           <div class="flex items-center gap-3.5">
             <div class="w-12 h-12 sm:w-13 sm:h-13 rounded-full flex items-center justify-center shrink-0">
-              <img src="assets/logo.png" alt="Logo PPK Ormawa E-BIO PENS" class="w-full h-full object-contain rounded-full" style="object-fit: contain;">
+              <img src="assets/logo.png" alt="Logo PPK Ormawa E-BIO" class="w-full h-full object-contain rounded-full" style="object-fit: contain;">
             </div>
             <div>
               <span class="font-extrabold text-base sm:text-lg tracking-tight text-white block">PPK ORMAWA E-BIO 2026</span>
@@ -28,7 +28,7 @@ function renderFooter() {
           </div>
 
           <p class="text-xs sm:text-sm text-slate-300 leading-relaxed max-w-xl">
-            PPK Ormawa E-BIO PENS 2026 merupakan program pemberdayaan masyarakat berbasis Smart Farming yang memanfaatkan IoT, light trap bertenaga surya, dan pemantauan kondisi lahan untuk mendukung pertanian bawang merah berkelanjutan di Desa Sajen, Mojokerto, melalui kolaborasi mahasiswa, pemerintah desa, kelompok tani, dan BPP.
+            PPK Ormawa E-BIO 2026 merupakan program pemberdayaan masyarakat berbasis Smart Farming yang memanfaatkan IoT, light trap bertenaga surya, dan pemantauan kondisi lahan untuk mendukung pertanian bawang merah berkelanjutan di Desa Sajen, Mojokerto, melalui kolaborasi mahasiswa, pemerintah desa, kelompok tani, dan BPP.
           </p>
 
           <!-- Badges Mitra Strategis Program -->
@@ -76,7 +76,7 @@ function renderFooter() {
                   <path
                     d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z" />
                 </svg>
-                <span>PPKO E-BIO PENS</span>
+                <span>PPKO E-BIO</span>
               </a>
               <a href="https://www.instagram.com/ppko.ebiopens/" target="_blank" rel="noopener noreferrer"
                 class="footer-social-btn-instagram inline-flex items-center gap-2 px-4 py-2 rounded-full text-xs font-semibold shadow-xs">
