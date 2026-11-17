@@ -1,7 +1,7 @@
 {
-  "name": "abdidaya-ebio-pens",
+  "name": "abdidaya-ebio",
   "version": "1.0.0",
-  "description": "PPK Ormawa E-BIO PENS Landing Page",
+  "description": "PPK Ormawa E-BIO Landing Page",
   "main": "index.html",
   "scripts": {
     "dev": "node server.js",
@@ -10,10 +10,10 @@
   },
   "keywords": [
     "ppk-ormawa",
-    "ebio-pens",
+    "ebio",
     "abdidaya"
   ],
-  "author": "PPK Ormawa E-BIO PENS",
+  "author": "PPK Ormawa E-BIO",
   "license": "ISC"
 }
 

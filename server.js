@@ -76,7 +76,7 @@ const server = http.createServer((req, res) => {
 server.listen(PORT, () => {
   const url = `http://localhost:${PORT}`;
   console.log('\n  ======================================================');
-  console.log('    PPK ORMAWA E-BIO PENS — Local Development Server');
+  console.log('    PPK ORMAWA E-BIO — Local Development Server');
   console.log('  ======================================================\n');
   console.log(`  ➜  Local:   \x1b[36m${url}\x1b[0m`);
   console.log('  ➜  Tekan \x1b[33mCtrl + C\x1b[0m untuk menghentikan server.\n');
