@@ -7,6 +7,9 @@ function renderAbdidayaAwards() {
   const container = document.getElementById('abdidaya-awards-container');
   if (!container) return;
 
+  // Pertahankan struktur jika sudah ada di DOM untuk performa render langsung
+  if (container.children && container.children.length > 0) return;
+
   const awards = (typeof EBIO_DATA !== 'undefined' && EBIO_DATA.abdidayaAwards)
     ? EBIO_DATA.abdidayaAwards
     : (typeof abdidayaAwardsData !== 'undefined' ? abdidayaAwardsData : []);
@@ -45,18 +48,14 @@ function renderAbdidayaAwards() {
   };
 
   container.innerHTML = awards.map((item, idx) => `
-    <div class="relative p-6 sm:p-7 rounded-3xl bg-white dark:bg-[#0e1726] border-2 ${borderThemes[item.themeColor] || 'border-slate-200'} shadow-xl hover:shadow-2xl hover:-translate-y-2 transition-all duration-300 flex flex-col justify-between group reveal" style="transition-delay: ${idx * 120}ms;">
-      
-      <!-- Top Decorative Glow -->
-      <div class="absolute top-0 right-0 w-32 h-32 bg-gradient-to-bl from-${item.themeColor}-500/10 to-transparent rounded-tr-3xl pointer-events-none"></div>
-
+    <div class="relative p-6 sm:p-7 rounded-2xl sm:rounded-3xl bg-white dark:bg-[#0e1726] border border-slate-200/80 dark:border-slate-800 shadow-sm hover:shadow-md hover:-translate-y-1 transition-all duration-300 flex flex-col justify-between group reveal" style="transition-delay: ${idx * 120}ms;">
       <div>
         <!-- Top Meta: Badge & Icon -->
         <div class="flex items-center justify-between gap-3 mb-5">
           <span class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full text-xs font-extrabold tracking-wide border shadow-xs ${badgeThemes[item.themeColor] || 'bg-slate-100 text-slate-800'}">
             ${item.rankBadge}
           </span>
-          <div class="w-11 h-11 rounded-2xl flex items-center justify-center shrink-0 ${tagThemes[item.themeColor]} shadow-inner">
+          <div class="w-10 h-10 rounded-xl flex items-center justify-center shrink-0 ${tagThemes[item.themeColor]} shadow-inner">
             ${icons[item.iconType] || icons.trophy}
           </div>
         </div>
@@ -70,16 +69,6 @@ function renderAbdidayaAwards() {
         <h3 class="text-base sm:text-lg font-bold text-slate-900 dark:text-white leading-snug group-hover:text-emerald-600 dark:group-hover:text-emerald-400 transition-colors">
           ${item.title}
         </h3>
-
-        <!-- Assessment Pill -->
-        <div class="mt-3">
-          <span class="inline-flex items-center gap-1 px-2.5 py-1 rounded-lg text-[11px] sm:text-xs font-semibold ${tagThemes[item.themeColor]} border border-${item.themeColor}-200/50">
-            <svg class="w-3 h-3" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M5 13l4 4L19 7" />
-            </svg>
-            ${item.assessment}
-          </span>
-        </div>
 
         <!-- Description -->
         <p class="mt-4 text-xs sm:text-sm text-slate-600 dark:text-slate-300 leading-relaxed">

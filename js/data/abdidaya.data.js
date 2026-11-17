@@ -18,33 +18,33 @@ const abdidayaAwardsData = [
   {
     rankBadge: "🥈 TERBAIK 2 NASIONAL",
     medal: "silver",
-    categoryTarget: "Organisasi Mahasiswa (Ormawa)",
-    title: "Kategori Ormawa dengan Rekam Jejak Pemberdayaan Masyarakat Terbaik",
+    categoryTarget: "Kategori Organisasi Mahasiswa (ORMAWA)",
+    title: "Kategori Ormawa dengan Rekam Jejak Pemberdayaan Masyarakat Terbaik (Asesmen Portofolio)",
     assessment: "Asesmen Portofolio",
     recipient: "EEPIS Bidikmisi Organization (E-BIO)",
-    desc: "Penghargaan prestisius atas rekam jejak dedikasi, kedalaman partisipasi warga, serta konsistensi implementasi teknologi Light Trap IoT dalam memberdayakan kelompok tani bawang merah di Desa Sajen.",
+    desc: "Penghargaan atas rekam jejak EEPIS Bidikmisi Organization (E-BIO) dalam melaksanakan program pengabdian dan pemberdayaan masyarakat, mulai dari perencanaan, pelaksanaan, keterlibatan masyarakat, hingga keberlanjutan program yang memberikan manfaat nyata bagi masyarakat.",
     themeColor: "emerald",
     iconType: "trophy"
   },
   {
     rankBadge: "🥈 TERBAIK 2 NASIONAL",
     medal: "silver",
-    categoryTarget: "Dosen Pendamping Lapangan",
+    categoryTarget: "Kategori Dosen Pendamping",
     title: "Kategori Dosen Pendamping dengan Penguatan Kapasitas Ormawa Terbaik",
     assessment: "Pembinaan & Alih Teknologi",
     recipient: "Dosen Pendamping PPK Ormawa E-BIO",
-    desc: "Apresiasi atas bimbingan strategis, transfer keilmuan multidisiplin, serta komitmen pendampingan komprehensif bagi mahasiswa dan masyarakat petani di lapangan hingga ke ajang nasional.",
+    desc: "Apresiasi atas peran dosen pendamping dalam membimbing dan mengarahkan mahasiswa selama pelaksanaan program, memberikan dukungan keilmuan, serta membantu mahasiswa mengembangkan solusi dan menerapkan teknologi yang bermanfaat bagi masyarakat.",
     themeColor: "blue",
     iconType: "mentor"
   },
   {
     rankBadge: "🏅 TERBAIK 4 NASIONAL",
     medal: "bronze",
-    categoryTarget: "Perguruan Tinggi Penyelenggara",
+    categoryTarget: "Kategori Perguruan Tinggi",
     title: "Kategori Perguruan Tinggi dengan Penguatan Ekosistem Pemberdayaan Terbaik",
     assessment: "Penguatan Ekosistem Kampus & MBKM",
     recipient: "Politeknik Elektronika Negeri Surabaya (PENS)",
-    desc: "Pengakuan nasional atas komitmen PENS dalam memfasilitasi rekognisi MBKM, ketersediaan sarana riset terapan, pendanaan stimulan, serta ekosistem pendukung pengabdian masyarakat.",
+    desc: "Pengakuan atas dukungan PENS dalam memfasilitasi kegiatan pemberdayaan masyarakat melalui pendampingan mahasiswa, penyediaan sarana dan prasarana, dukungan pendanaan, serta pengembangan program pengabdian yang memberikan manfaat bagi masyarakat.",
     themeColor: "amber",
     iconType: "university"
   }
