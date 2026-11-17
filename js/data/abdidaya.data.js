@@ -34,7 +34,7 @@ const abdidayaAwardsData = [
     assessment: "Pembinaan & Alih Teknologi",
     recipient: "Dosen Pendamping PPK Ormawa E-BIO",
     desc: "Apresiasi atas peran dosen pendamping dalam membimbing dan mengarahkan mahasiswa selama pelaksanaan program, memberikan dukungan keilmuan, serta membantu mahasiswa mengembangkan solusi dan menerapkan teknologi yang bermanfaat bagi masyarakat.",
-    themeColor: "blue",
+    themeColor: "emerald",
     iconType: "mentor"
   },
   {
@@ -45,7 +45,7 @@ const abdidayaAwardsData = [
     assessment: "Penguatan Ekosistem Kampus & MBKM",
     recipient: "Politeknik Elektronika Negeri Surabaya (PENS)",
     desc: "Pengakuan atas dukungan PENS dalam memfasilitasi kegiatan pemberdayaan masyarakat melalui pendampingan mahasiswa, penyediaan sarana dan prasarana, dukungan pendanaan, serta pengembangan program pengabdian yang memberikan manfaat bagi masyarakat.",
-    themeColor: "amber",
+    themeColor: "emerald",
     iconType: "university"
   }
 ];

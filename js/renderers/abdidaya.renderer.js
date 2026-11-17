@@ -21,10 +21,10 @@ function renderAbdidayaAwards() {
     trophy: `<svg class="w-6 h-6 text-emerald-600 dark:text-emerald-400" fill="currentColor" viewBox="0 0 24 24">
       <path d="M12 2a1 1 0 011 1v1.07A7.002 7.002 0 0119 11v1a5 5 0 01-4 4.9V19h2a1 1 0 110 2H7a1 1 0 110-2h2v-2.1A5 5 0 015 12v-1a7.002 7.002 0 016-6.93V3a1 1 0 011-1zm5 9a5 5 0 00-10 0v1a3 3 0 003 3h4a3 3 0 003-3v-1zm-6 10h2v-2h-2v2zM3 7a1 1 0 011-1h1v4a6.97 6.97 0 011.08 3.72A3.001 3.001 0 014 11V7zm17 0v4a3.001 3.001 0 01-2.08 2.72A6.97 6.97 0 0019 10V6h1a1 1 0 011 1z"/>
     </svg>`,
-    mentor: `<svg class="w-6 h-6 text-blue-600 dark:text-blue-400" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+    mentor: `<svg class="w-6 h-6 text-emerald-600 dark:text-emerald-400" fill="none" viewBox="0 0 24 24" stroke="currentColor">
       <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 14l9-5-9-5-9 5 9 5zm0 0l6.16-3.422a12.083 12.083 0 01.665 6.479A11.952 11.952 0 0012 20.055a11.952 11.952 0 00-6.824-2.998 12.078 12.078 0 01.665-6.479L12 14zm-4 6v-7.5l4-2.222" />
     </svg>`,
-    university: `<svg class="w-6 h-6 text-amber-600 dark:text-amber-400" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+    university: `<svg class="w-6 h-6 text-emerald-600 dark:text-emerald-400" fill="none" viewBox="0 0 24 24" stroke="currentColor">
       <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4" />
     </svg>`
   };
