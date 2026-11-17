@@ -48,42 +48,27 @@ function renderAbdidayaAwards() {
   };
 
   container.innerHTML = awards.map((item, idx) => `
-    <div class="relative p-6 sm:p-7 rounded-2xl sm:rounded-3xl bg-white dark:bg-[#0e1726] border border-slate-200/80 dark:border-slate-800 shadow-sm hover:shadow-md hover:-translate-y-1 transition-all duration-300 flex flex-col justify-between group reveal" style="transition-delay: ${idx * 120}ms;">
-      <div>
-        <!-- Top Meta: Badge & Icon -->
-        <div class="flex items-center justify-between gap-3 mb-5">
-          <span class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full text-xs font-extrabold tracking-wide border shadow-xs ${badgeThemes[item.themeColor] || 'bg-slate-100 text-slate-800'}">
-            ${item.rankBadge}
-          </span>
-          <div class="w-10 h-10 rounded-xl flex items-center justify-center shrink-0 ${tagThemes[item.themeColor]} shadow-inner">
-            ${icons[item.iconType] || icons.trophy}
-          </div>
-        </div>
-
-        <!-- Target Category -->
-        <div class="text-[11px] font-bold uppercase tracking-widest text-slate-400 dark:text-slate-500 mb-2">
-          ${item.categoryTarget}
-        </div>
-
-        <!-- Main Category Title -->
-        <h3 class="text-base sm:text-lg font-bold text-slate-900 dark:text-white leading-snug group-hover:text-emerald-600 dark:group-hover:text-emerald-400 transition-colors">
-          ${item.title}
-        </h3>
-
-        <!-- Description -->
-        <p class="mt-4 text-xs sm:text-sm text-slate-600 dark:text-slate-300 leading-relaxed">
-          ${item.desc}
-        </p>
-      </div>
-
-      <!-- Recipient Footer Info -->
-      <div class="mt-6 pt-4 border-t border-slate-100 dark:border-slate-800 flex items-center justify-between gap-2 text-xs">
-        <span class="text-slate-400 dark:text-slate-500 text-[11px] shrink-0">Penerima Apresiasi</span>
-        <span class="font-bold text-slate-800 dark:text-slate-200 text-right leading-tight" title="${item.recipient}">
-          ${item.recipient}
+    <div class="relative p-6 sm:p-7 rounded-2xl sm:rounded-3xl bg-white dark:bg-[#0e1726] border border-slate-200/80 dark:border-slate-800 shadow-sm hover:shadow-md hover:-translate-y-1 transition-all duration-300 flex flex-col group reveal" style="transition-delay: ${idx * 120}ms;">
+      <div class="flex items-center justify-between gap-3 mb-5">
+        <span class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full text-xs font-extrabold tracking-wide border shadow-xs ${badgeThemes[item.themeColor] || 'bg-slate-100 text-slate-800'}">
+          ${item.rankBadge}
         </span>
+        <div class="w-10 h-10 rounded-xl flex items-center justify-center shrink-0 ${tagThemes[item.themeColor]} shadow-inner">
+          ${icons[item.iconType] || icons.trophy}
+        </div>
       </div>
 
+      <div class="text-[11px] font-bold uppercase tracking-widest text-slate-400 dark:text-slate-500 mb-2">
+        ${item.categoryTarget}
+      </div>
+
+      <h3 class="text-base sm:text-lg font-bold text-slate-900 dark:text-white leading-snug group-hover:text-emerald-600 dark:group-hover:text-emerald-400 transition-colors">
+        ${item.title}
+      </h3>
+
+      <p class="mt-4 text-xs sm:text-sm text-slate-600 dark:text-slate-300 leading-relaxed">
+        ${item.desc}
+      </p>
     </div>
   `).join('');
 }
